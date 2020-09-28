@@ -25,6 +25,19 @@ export interface ISupportedInstruments {
   pairs: Record<string, IInstrument | undefined>;
 }
 
+export interface IAsset {
+  id: string;
+  can_deposit: boolean;
+  can_withdraw: boolean;
+  asset_name: string;
+  withdrawal_fee: number;
+  scale: number;
+}
+
+export interface ISupportedAssets {
+  data: IAsset[];
+}
+
 export class PublicClient {
   public readonly url: URL;
 
@@ -42,6 +55,15 @@ export class PublicClient {
     const path = "/frontoffice/api/info";
     const instruments = (await this.fetch(path)) as ISupportedInstruments;
     return instruments;
+  }
+
+  /**
+   * Get the list of all supported assets
+   */
+  public async getAssets(): Promise<ISupportedAssets> {
+    const path = "/frontoffice/api/assets-info";
+    const assets = (await this.fetch(path)) as ISupportedAssets;
+    return assets;
   }
 
   /**
