@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ISupportedInstruments | b2trader - v1.3.0</title>
+    <title>IOrderBookSnapshotOptions | b2trader - v1.3.0</title>
     <meta name="description" content="Documentation for b2trader - v1.3.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -78,10 +78,12 @@
               <a href="../globals.html">Globals</a>
             </li>
             <li>
-              <a href="isupportedinstruments.html">ISupportedInstruments</a>
+              <a href="iorderbooksnapshotoptions.html"
+                >IOrderBookSnapshotOptions</a
+              >
             </li>
           </ul>
-          <h1>Interface ISupportedInstruments</h1>
+          <h1>Interface IOrderBookSnapshotOptions</h1>
         </div>
       </div>
     </header>
@@ -92,7 +94,7 @@
             <h3>Hierarchy</h3>
             <ul class="tsd-hierarchy">
               <li>
-                <span class="target">ISupportedInstruments</span>
+                <span class="target">IOrderBookSnapshotOptions</span>
               </li>
             </ul>
           </section>
@@ -105,16 +107,9 @@
                   <ul class="tsd-index-list">
                     <li class="tsd-kind-property tsd-parent-kind-interface">
                       <a
-                        href="isupportedinstruments.html#pairs"
+                        href="iorderbooksnapshotoptions.html#instrument"
                         class="tsd-kind-icon"
-                        >pairs</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="isupportedinstruments.html#servertime"
-                        class="tsd-kind-icon"
-                        >server<wbr />Time</a
+                        >instrument</a
                       >
                     </li>
                   </ul>
@@ -127,48 +122,19 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="pairs" class="tsd-anchor"></a>
-              <h3>pairs</h3>
+              <a name="instrument" class="tsd-anchor"></a>
+              <h3>instrument</h3>
               <div class="tsd-signature tsd-kind-icon">
-                pairs<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">Record</span
-                ><span class="tsd-signature-symbol">&lt;</span
-                ><span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">, </span
-                ><a href="iinstrument.html" class="tsd-signature-type"
-                  >IInstrument</a
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol">&gt;</span>
+                instrument<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">string</span>
               </div>
               <aside class="tsd-sources">
                 <ul>
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L29"
-                      >src/public.ts:29</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
-            >
-              <a name="servertime" class="tsd-anchor"></a>
-              <h3>server<wbr />Time</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                server<wbr />Time<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">number</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L28"
-                      >src/public.ts:28</a
+                      href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L9"
+                      >src/public.ts:9</a
                     >
                   </li>
                 </ul>
@@ -207,11 +173,24 @@
                   >IOrder<wbr />Book<wbr />Snapshot</a
                 >
               </li>
-              <li class="tsd-kind-interface">
+            </ul>
+            <ul class="current">
+              <li class="current tsd-kind-interface">
                 <a href="iorderbooksnapshotoptions.html" class="tsd-kind-icon"
                   >IOrder<wbr />Book<wbr />Snapshot<wbr />Options</a
                 >
+                <ul>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a
+                      href="iorderbooksnapshotoptions.html#instrument"
+                      class="tsd-kind-icon"
+                      >instrument</a
+                    >
+                  </li>
+                </ul>
               </li>
+            </ul>
+            <ul class="after-current">
               <li class="tsd-kind-interface">
                 <a href="ipublicclientoptions.html" class="tsd-kind-icon"
                   >IPublic<wbr />Client<wbr />Options</a
@@ -222,31 +201,12 @@
                   >ISupported<wbr />Assets</a
                 >
               </li>
-            </ul>
-            <ul class="current">
-              <li class="current tsd-kind-interface">
+              <li class="tsd-kind-interface">
                 <a href="isupportedinstruments.html" class="tsd-kind-icon"
                   >ISupported<wbr />Instruments</a
                 >
-                <ul>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a
-                      href="isupportedinstruments.html#pairs"
-                      class="tsd-kind-icon"
-                      >pairs</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a
-                      href="isupportedinstruments.html#servertime"
-                      class="tsd-kind-icon"
-                      >server<wbr />Time</a
-                    >
-                  </li>
-                </ul>
               </li>
             </ul>
-            <ul class="after-current"></ul>
           </nav>
         </div>
       </div>

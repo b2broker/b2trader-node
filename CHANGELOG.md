@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0](https://github.com/b2broker/b2trader-node/compare/v1.2.0...v1.3.0) (2020-09-28)
+
+### Features
+
+- add the `getOrderBookSnapshot` method ([0191d08](https://github.com/b2broker/b2trader-node/commit/0191d0840554f7022f7b37e6010ec8874320ed73))
+
 ## [1.2.0](https://github.com/b2broker/b2trader-node/compare/v1.1.0...v1.2.0) (2020-09-28)
 
 ### Features

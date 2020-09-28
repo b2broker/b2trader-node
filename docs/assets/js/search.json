@@ -89,12 +89,27 @@
     {
       "id": 10,
       "kind": 256,
+      "name": "IOrderBookSnapshotOptions",
+      "url": "interfaces/iorderbooksnapshotoptions.html",
+      "classes": "tsd-kind-interface"
+    },
+    {
+      "id": 11,
+      "kind": 1024,
+      "name": "instrument",
+      "url": "interfaces/iorderbooksnapshotoptions.html#instrument",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshotOptions"
+    },
+    {
+      "id": 12,
+      "kind": 256,
       "name": "IInstrument",
       "url": "interfaces/iinstrument.html",
       "classes": "tsd-kind-interface"
     },
     {
-      "id": 11,
+      "id": 13,
       "kind": 1024,
       "name": "baseAsset",
       "url": "interfaces/iinstrument.html#baseasset",
@@ -102,7 +117,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 12,
+      "id": 14,
       "kind": 1024,
       "name": "quoteAsset",
       "url": "interfaces/iinstrument.html#quoteasset",
@@ -110,7 +125,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 13,
+      "id": 15,
       "kind": 1024,
       "name": "hidden",
       "url": "interfaces/iinstrument.html#hidden",
@@ -118,7 +133,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 14,
+      "id": 16,
       "kind": 1024,
       "name": "makerFee",
       "url": "interfaces/iinstrument.html#makerfee",
@@ -126,7 +141,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 15,
+      "id": 17,
       "kind": 1024,
       "name": "makerFeeLimit",
       "url": "interfaces/iinstrument.html#makerfeelimit",
@@ -134,7 +149,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 16,
+      "id": 18,
       "kind": 1024,
       "name": "takerFee",
       "url": "interfaces/iinstrument.html#takerfee",
@@ -142,7 +157,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 17,
+      "id": 19,
       "kind": 1024,
       "name": "takerFeeLimit",
       "url": "interfaces/iinstrument.html#takerfeelimit",
@@ -150,7 +165,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 18,
+      "id": 20,
       "kind": 1024,
       "name": "priceScale",
       "url": "interfaces/iinstrument.html#pricescale",
@@ -158,7 +173,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 19,
+      "id": 21,
       "kind": 1024,
       "name": "amountScale",
       "url": "interfaces/iinstrument.html#amountscale",
@@ -166,7 +181,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 20,
+      "id": 22,
       "kind": 1024,
       "name": "createdAt",
       "url": "interfaces/iinstrument.html#createdat",
@@ -174,7 +189,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 21,
+      "id": 23,
       "kind": 1024,
       "name": "updatedAt",
       "url": "interfaces/iinstrument.html#updatedat",
@@ -182,7 +197,7 @@
       "parent": "IInstrument"
     },
     {
-      "id": 22,
+      "id": 24,
       "kind": 1024,
       "name": "status",
       "url": "interfaces/iinstrument.html#status",
@@ -190,14 +205,14 @@
       "parent": "IInstrument"
     },
     {
-      "id": 23,
+      "id": 25,
       "kind": 256,
       "name": "ISupportedInstruments",
       "url": "interfaces/isupportedinstruments.html",
       "classes": "tsd-kind-interface"
     },
     {
-      "id": 24,
+      "id": 26,
       "kind": 1024,
       "name": "serverTime",
       "url": "interfaces/isupportedinstruments.html#servertime",
@@ -205,7 +220,7 @@
       "parent": "ISupportedInstruments"
     },
     {
-      "id": 25,
+      "id": 27,
       "kind": 1024,
       "name": "pairs",
       "url": "interfaces/isupportedinstruments.html#pairs",
@@ -213,14 +228,14 @@
       "parent": "ISupportedInstruments"
     },
     {
-      "id": 26,
+      "id": 28,
       "kind": 256,
       "name": "IAsset",
       "url": "interfaces/iasset.html",
       "classes": "tsd-kind-interface"
     },
     {
-      "id": 27,
+      "id": 29,
       "kind": 1024,
       "name": "id",
       "url": "interfaces/iasset.html#id",
@@ -228,7 +243,7 @@
       "parent": "IAsset"
     },
     {
-      "id": 28,
+      "id": 30,
       "kind": 1024,
       "name": "can_deposit",
       "url": "interfaces/iasset.html#can_deposit",
@@ -236,7 +251,7 @@
       "parent": "IAsset"
     },
     {
-      "id": 29,
+      "id": 31,
       "kind": 1024,
       "name": "can_withdraw",
       "url": "interfaces/iasset.html#can_withdraw",
@@ -244,7 +259,7 @@
       "parent": "IAsset"
     },
     {
-      "id": 30,
+      "id": 32,
       "kind": 1024,
       "name": "asset_name",
       "url": "interfaces/iasset.html#asset_name",
@@ -252,7 +267,7 @@
       "parent": "IAsset"
     },
     {
-      "id": 31,
+      "id": 33,
       "kind": 1024,
       "name": "withdrawal_fee",
       "url": "interfaces/iasset.html#withdrawal_fee",
@@ -260,7 +275,7 @@
       "parent": "IAsset"
     },
     {
-      "id": 32,
+      "id": 34,
       "kind": 1024,
       "name": "scale",
       "url": "interfaces/iasset.html#scale",
@@ -268,14 +283,14 @@
       "parent": "IAsset"
     },
     {
-      "id": 33,
+      "id": 35,
       "kind": 256,
       "name": "ISupportedAssets",
       "url": "interfaces/isupportedassets.html",
       "classes": "tsd-kind-interface"
     },
     {
-      "id": 34,
+      "id": 36,
       "kind": 1024,
       "name": "data",
       "url": "interfaces/isupportedassets.html#data",
@@ -283,14 +298,77 @@
       "parent": "ISupportedAssets"
     },
     {
-      "id": 35,
+      "id": 37,
+      "kind": 256,
+      "name": "IOrderBookSnapshot",
+      "url": "interfaces/iorderbooksnapshot.html",
+      "classes": "tsd-kind-interface"
+    },
+    {
+      "id": 38,
+      "kind": 1024,
+      "name": "instrument",
+      "url": "interfaces/iorderbooksnapshot.html#instrument",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshot"
+    },
+    {
+      "id": 39,
+      "kind": 1024,
+      "name": "bids",
+      "url": "interfaces/iorderbooksnapshot.html#bids",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshot"
+    },
+    {
+      "id": 40,
+      "kind": 1024,
+      "name": "asks",
+      "url": "interfaces/iorderbooksnapshot.html#asks",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshot"
+    },
+    {
+      "id": 41,
+      "kind": 1024,
+      "name": "version",
+      "url": "interfaces/iorderbooksnapshot.html#version",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshot"
+    },
+    {
+      "id": 42,
+      "kind": 1024,
+      "name": "askTotalAmount",
+      "url": "interfaces/iorderbooksnapshot.html#asktotalamount",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshot"
+    },
+    {
+      "id": 43,
+      "kind": 1024,
+      "name": "bidTotalAmount",
+      "url": "interfaces/iorderbooksnapshot.html#bidtotalamount",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshot"
+    },
+    {
+      "id": 44,
+      "kind": 1024,
+      "name": "snapshot",
+      "url": "interfaces/iorderbooksnapshot.html#snapshot",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IOrderBookSnapshot"
+    },
+    {
+      "id": 45,
       "kind": 128,
       "name": "PublicClient",
       "url": "classes/publicclient.html",
       "classes": "tsd-kind-class"
     },
     {
-      "id": 36,
+      "id": 46,
       "kind": 1024,
       "name": "url",
       "url": "classes/publicclient.html#url",
@@ -298,7 +376,7 @@
       "parent": "PublicClient"
     },
     {
-      "id": 37,
+      "id": 47,
       "kind": 512,
       "name": "constructor",
       "url": "classes/publicclient.html#constructor",
@@ -306,7 +384,7 @@
       "parent": "PublicClient"
     },
     {
-      "id": 38,
+      "id": 48,
       "kind": 2048,
       "name": "getInstruments",
       "url": "classes/publicclient.html#getinstruments",
@@ -314,7 +392,7 @@
       "parent": "PublicClient"
     },
     {
-      "id": 39,
+      "id": 49,
       "kind": 2048,
       "name": "getAssets",
       "url": "classes/publicclient.html#getassets",
@@ -322,7 +400,15 @@
       "parent": "PublicClient"
     },
     {
-      "id": 40,
+      "id": 50,
+      "kind": 2048,
+      "name": "getOrderBookSnapshot",
+      "url": "classes/publicclient.html#getorderbooksnapshot",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "PublicClient"
+    },
+    {
+      "id": 51,
       "kind": 2048,
       "name": "fetch",
       "url": "classes/publicclient.html#fetch",
@@ -330,7 +416,7 @@
       "parent": "PublicClient"
     },
     {
-      "id": 41,
+      "id": 52,
       "kind": 2048,
       "name": "setQuery",
       "url": "classes/publicclient.html#setquery",
@@ -338,7 +424,7 @@
       "parent": "PublicClient"
     },
     {
-      "id": 42,
+      "id": 53,
       "kind": 2048,
       "name": "fetch",
       "url": "classes/publicclient.html#fetch-1",
@@ -350,107 +436,133 @@
     "version": "2.3.9",
     "fields": ["name", "parent"],
     "fieldVectors": [
-      ["name/0", [0, 16.441]],
+      ["name/0", [0, 18.673]],
       ["parent/0", []],
-      ["name/1", [1, 28.679]],
-      ["parent/1", [0, 1.523]],
-      ["name/2", [2, 33.787]],
-      ["parent/2", [0, 1.523]],
-      ["name/3", [3, 28.679]],
-      ["parent/3", [0, 1.523]],
-      ["name/4", [1, 28.679]],
-      ["parent/4", [0, 1.523]],
-      ["name/5", [4, 33.787]],
-      ["parent/5", [0, 1.523]],
-      ["name/6", [5, 33.787]],
-      ["parent/6", [0, 1.523]],
-      ["name/7", [6, 33.787]],
-      ["parent/7", [0, 1.523]],
-      ["name/8", [7, 28.679]],
+      ["name/1", [1, 30.91]],
+      ["parent/1", [0, 1.726]],
+      ["name/2", [2, 36.019]],
+      ["parent/2", [0, 1.726]],
+      ["name/3", [3, 30.91]],
+      ["parent/3", [0, 1.726]],
+      ["name/4", [1, 30.91]],
+      ["parent/4", [0, 1.726]],
+      ["name/5", [4, 36.019]],
+      ["parent/5", [0, 1.726]],
+      ["name/6", [5, 36.019]],
+      ["parent/6", [0, 1.726]],
+      ["name/7", [6, 36.019]],
+      ["parent/7", [0, 1.726]],
+      ["name/8", [7, 30.91]],
       ["parent/8", []],
-      ["name/9", [8, 28.679]],
-      ["parent/9", [7, 2.657]],
-      ["name/10", [9, 11.815]],
+      ["name/9", [8, 30.91]],
+      ["parent/9", [7, 2.857]],
+      ["name/10", [9, 30.91]],
       ["parent/10", []],
-      ["name/11", [10, 33.787]],
-      ["parent/11", [9, 1.094]],
-      ["name/12", [11, 33.787]],
-      ["parent/12", [9, 1.094]],
-      ["name/13", [12, 33.787]],
-      ["parent/13", [9, 1.094]],
-      ["name/14", [13, 33.787]],
-      ["parent/14", [9, 1.094]],
-      ["name/15", [14, 33.787]],
-      ["parent/15", [9, 1.094]],
-      ["name/16", [15, 33.787]],
-      ["parent/16", [9, 1.094]],
-      ["name/17", [16, 33.787]],
-      ["parent/17", [9, 1.094]],
-      ["name/18", [17, 33.787]],
-      ["parent/18", [9, 1.094]],
-      ["name/19", [18, 33.787]],
-      ["parent/19", [9, 1.094]],
-      ["name/20", [19, 33.787]],
-      ["parent/20", [9, 1.094]],
-      ["name/21", [20, 33.787]],
-      ["parent/21", [9, 1.094]],
-      ["name/22", [21, 33.787]],
-      ["parent/22", [9, 1.094]],
-      ["name/23", [22, 25.314]],
-      ["parent/23", []],
-      ["name/24", [23, 33.787]],
-      ["parent/24", [22, 2.345]],
-      ["name/25", [24, 33.787]],
-      ["parent/25", [22, 2.345]],
-      ["name/26", [25, 17.693]],
-      ["parent/26", []],
-      ["name/27", [26, 33.787]],
-      ["parent/27", [25, 1.639]],
-      ["name/28", [27, 33.787]],
-      ["parent/28", [25, 1.639]],
-      ["name/29", [28, 33.787]],
-      ["parent/29", [25, 1.639]],
-      ["name/30", [29, 33.787]],
-      ["parent/30", [25, 1.639]],
-      ["name/31", [30, 33.787]],
-      ["parent/31", [25, 1.639]],
-      ["name/32", [31, 33.787]],
-      ["parent/32", [25, 1.639]],
-      ["name/33", [32, 28.679]],
-      ["parent/33", []],
-      ["name/34", [33, 33.787]],
-      ["parent/34", [32, 2.657]],
-      ["name/35", [34, 16.441]],
+      ["name/11", [10, 30.91]],
+      ["parent/11", [9, 2.857]],
+      ["name/12", [11, 14.046]],
+      ["parent/12", []],
+      ["name/13", [12, 36.019]],
+      ["parent/13", [11, 1.298]],
+      ["name/14", [13, 36.019]],
+      ["parent/14", [11, 1.298]],
+      ["name/15", [14, 36.019]],
+      ["parent/15", [11, 1.298]],
+      ["name/16", [15, 36.019]],
+      ["parent/16", [11, 1.298]],
+      ["name/17", [16, 36.019]],
+      ["parent/17", [11, 1.298]],
+      ["name/18", [17, 36.019]],
+      ["parent/18", [11, 1.298]],
+      ["name/19", [18, 36.019]],
+      ["parent/19", [11, 1.298]],
+      ["name/20", [19, 36.019]],
+      ["parent/20", [11, 1.298]],
+      ["name/21", [20, 36.019]],
+      ["parent/21", [11, 1.298]],
+      ["name/22", [21, 36.019]],
+      ["parent/22", [11, 1.298]],
+      ["name/23", [22, 36.019]],
+      ["parent/23", [11, 1.298]],
+      ["name/24", [23, 36.019]],
+      ["parent/24", [11, 1.298]],
+      ["name/25", [24, 27.546]],
+      ["parent/25", []],
+      ["name/26", [25, 36.019]],
+      ["parent/26", [24, 2.546]],
+      ["name/27", [26, 36.019]],
+      ["parent/27", [24, 2.546]],
+      ["name/28", [27, 19.924]],
+      ["parent/28", []],
+      ["name/29", [28, 36.019]],
+      ["parent/29", [27, 1.842]],
+      ["name/30", [29, 36.019]],
+      ["parent/30", [27, 1.842]],
+      ["name/31", [30, 36.019]],
+      ["parent/31", [27, 1.842]],
+      ["name/32", [31, 36.019]],
+      ["parent/32", [27, 1.842]],
+      ["name/33", [32, 36.019]],
+      ["parent/33", [27, 1.842]],
+      ["name/34", [33, 36.019]],
+      ["parent/34", [27, 1.842]],
+      ["name/35", [34, 30.91]],
       ["parent/35", []],
-      ["name/36", [8, 28.679]],
-      ["parent/36", [34, 1.523]],
-      ["name/37", [3, 28.679]],
-      ["parent/37", [34, 1.523]],
-      ["name/38", [35, 33.787]],
-      ["parent/38", [34, 1.523]],
-      ["name/39", [36, 33.787]],
-      ["parent/39", [34, 1.523]],
-      ["name/40", [37, 28.679]],
-      ["parent/40", [34, 1.523]],
-      ["name/41", [38, 33.787]],
-      ["parent/41", [34, 1.523]],
-      ["name/42", [37, 28.679]],
-      ["parent/42", [34, 1.523]]
+      ["name/36", [35, 36.019]],
+      ["parent/36", [34, 2.857]],
+      ["name/37", [36, 18.673]],
+      ["parent/37", []],
+      ["name/38", [10, 30.91]],
+      ["parent/38", [36, 1.726]],
+      ["name/39", [37, 36.019]],
+      ["parent/39", [36, 1.726]],
+      ["name/40", [38, 36.019]],
+      ["parent/40", [36, 1.726]],
+      ["name/41", [39, 36.019]],
+      ["parent/41", [36, 1.726]],
+      ["name/42", [40, 36.019]],
+      ["parent/42", [36, 1.726]],
+      ["name/43", [41, 36.019]],
+      ["parent/43", [36, 1.726]],
+      ["name/44", [42, 36.019]],
+      ["parent/44", [36, 1.726]],
+      ["name/45", [43, 17.56]],
+      ["parent/45", []],
+      ["name/46", [8, 30.91]],
+      ["parent/46", [43, 1.623]],
+      ["name/47", [3, 30.91]],
+      ["parent/47", [43, 1.623]],
+      ["name/48", [44, 36.019]],
+      ["parent/48", [43, 1.623]],
+      ["name/49", [45, 36.019]],
+      ["parent/49", [43, 1.623]],
+      ["name/50", [46, 36.019]],
+      ["parent/50", [43, 1.623]],
+      ["name/51", [47, 30.91]],
+      ["parent/51", [43, 1.623]],
+      ["name/52", [48, 36.019]],
+      ["parent/52", [43, 1.623]],
+      ["name/53", [47, 30.91]],
+      ["parent/53", [43, 1.623]]
     ],
     "invertedIndex": [
-      ["amountscale", { "_index": 18, "name": { "19": {} }, "parent": {} }],
-      ["asset_name", { "_index": 29, "name": { "30": {} }, "parent": {} }],
-      ["baseasset", { "_index": 10, "name": { "11": {} }, "parent": {} }],
-      ["can_deposit", { "_index": 27, "name": { "28": {} }, "parent": {} }],
-      ["can_withdraw", { "_index": 28, "name": { "29": {} }, "parent": {} }],
+      ["amountscale", { "_index": 20, "name": { "21": {} }, "parent": {} }],
+      ["asks", { "_index": 38, "name": { "40": {} }, "parent": {} }],
+      ["asktotalamount", { "_index": 40, "name": { "42": {} }, "parent": {} }],
+      ["asset_name", { "_index": 31, "name": { "32": {} }, "parent": {} }],
+      ["baseasset", { "_index": 12, "name": { "13": {} }, "parent": {} }],
+      ["bids", { "_index": 37, "name": { "39": {} }, "parent": {} }],
+      ["bidtotalamount", { "_index": 41, "name": { "43": {} }, "parent": {} }],
+      ["can_deposit", { "_index": 29, "name": { "30": {} }, "parent": {} }],
+      ["can_withdraw", { "_index": 30, "name": { "31": {} }, "parent": {} }],
       [
         "constructor",
-        { "_index": 3, "name": { "3": {}, "37": {} }, "parent": {} }
+        { "_index": 3, "name": { "3": {}, "47": {} }, "parent": {} }
       ],
-      ["createdat", { "_index": 19, "name": { "20": {} }, "parent": {} }],
-      ["data", { "_index": 33, "name": { "34": {} }, "parent": {} }],
+      ["createdat", { "_index": 21, "name": { "22": {} }, "parent": {} }],
+      ["data", { "_index": 35, "name": { "36": {} }, "parent": {} }],
       ["error", { "_index": 6, "name": { "7": {} }, "parent": {} }],
-      ["fetch", { "_index": 37, "name": { "40": {}, "42": {} }, "parent": {} }],
+      ["fetch", { "_index": 47, "name": { "51": {}, "53": {} }, "parent": {} }],
       [
         "fetcherror",
         {
@@ -467,33 +579,35 @@
           }
         }
       ],
-      ["getassets", { "_index": 36, "name": { "39": {} }, "parent": {} }],
-      ["getinstruments", { "_index": 35, "name": { "38": {} }, "parent": {} }],
-      ["hidden", { "_index": 12, "name": { "13": {} }, "parent": {} }],
+      ["getassets", { "_index": 45, "name": { "49": {} }, "parent": {} }],
+      ["getinstruments", { "_index": 44, "name": { "48": {} }, "parent": {} }],
+      [
+        "getorderbooksnapshot",
+        { "_index": 46, "name": { "50": {} }, "parent": {} }
+      ],
+      ["hidden", { "_index": 14, "name": { "15": {} }, "parent": {} }],
       [
         "iasset",
         {
-          "_index": 25,
-          "name": { "26": {} },
+          "_index": 27,
+          "name": { "28": {} },
           "parent": {
-            "27": {},
-            "28": {},
             "29": {},
             "30": {},
             "31": {},
-            "32": {}
+            "32": {},
+            "33": {},
+            "34": {}
           }
         }
       ],
-      ["id", { "_index": 26, "name": { "27": {} }, "parent": {} }],
+      ["id", { "_index": 28, "name": { "29": {} }, "parent": {} }],
       [
         "iinstrument",
         {
-          "_index": 9,
-          "name": { "10": {} },
+          "_index": 11,
+          "name": { "12": {} },
           "parent": {
-            "11": {},
-            "12": {},
             "13": {},
             "14": {},
             "15": {},
@@ -503,9 +617,35 @@
             "19": {},
             "20": {},
             "21": {},
-            "22": {}
+            "22": {},
+            "23": {},
+            "24": {}
           }
         }
+      ],
+      [
+        "instrument",
+        { "_index": 10, "name": { "11": {}, "38": {} }, "parent": {} }
+      ],
+      [
+        "iorderbooksnapshot",
+        {
+          "_index": 36,
+          "name": { "37": {} },
+          "parent": {
+            "38": {},
+            "39": {},
+            "40": {},
+            "41": {},
+            "42": {},
+            "43": {},
+            "44": {}
+          }
+        }
+      ],
+      [
+        "iorderbooksnapshotoptions",
+        { "_index": 9, "name": { "10": {} }, "parent": { "11": {} } }
       ],
       [
         "ipublicclientoptions",
@@ -513,46 +653,49 @@
       ],
       [
         "isupportedassets",
-        { "_index": 32, "name": { "33": {} }, "parent": { "34": {} } }
+        { "_index": 34, "name": { "35": {} }, "parent": { "36": {} } }
       ],
       [
         "isupportedinstruments",
-        { "_index": 22, "name": { "23": {} }, "parent": { "24": {}, "25": {} } }
+        { "_index": 24, "name": { "25": {} }, "parent": { "26": {}, "27": {} } }
       ],
-      ["makerfee", { "_index": 13, "name": { "14": {} }, "parent": {} }],
-      ["makerfeelimit", { "_index": 14, "name": { "15": {} }, "parent": {} }],
+      ["makerfee", { "_index": 15, "name": { "16": {} }, "parent": {} }],
+      ["makerfeelimit", { "_index": 16, "name": { "17": {} }, "parent": {} }],
       ["message", { "_index": 4, "name": { "5": {} }, "parent": {} }],
       ["name", { "_index": 2, "name": { "2": {} }, "parent": {} }],
-      ["pairs", { "_index": 24, "name": { "25": {} }, "parent": {} }],
-      ["pricescale", { "_index": 17, "name": { "18": {} }, "parent": {} }],
+      ["pairs", { "_index": 26, "name": { "27": {} }, "parent": {} }],
+      ["pricescale", { "_index": 19, "name": { "20": {} }, "parent": {} }],
       [
         "publicclient",
         {
-          "_index": 34,
-          "name": { "35": {} },
+          "_index": 43,
+          "name": { "45": {} },
           "parent": {
-            "36": {},
-            "37": {},
-            "38": {},
-            "39": {},
-            "40": {},
-            "41": {},
-            "42": {}
+            "46": {},
+            "47": {},
+            "48": {},
+            "49": {},
+            "50": {},
+            "51": {},
+            "52": {},
+            "53": {}
           }
         }
       ],
-      ["quoteasset", { "_index": 11, "name": { "12": {} }, "parent": {} }],
+      ["quoteasset", { "_index": 13, "name": { "14": {} }, "parent": {} }],
       ["response", { "_index": 1, "name": { "1": {}, "4": {} }, "parent": {} }],
-      ["scale", { "_index": 31, "name": { "32": {} }, "parent": {} }],
-      ["servertime", { "_index": 23, "name": { "24": {} }, "parent": {} }],
-      ["setquery", { "_index": 38, "name": { "41": {} }, "parent": {} }],
+      ["scale", { "_index": 33, "name": { "34": {} }, "parent": {} }],
+      ["servertime", { "_index": 25, "name": { "26": {} }, "parent": {} }],
+      ["setquery", { "_index": 48, "name": { "52": {} }, "parent": {} }],
+      ["snapshot", { "_index": 42, "name": { "44": {} }, "parent": {} }],
       ["stack", { "_index": 5, "name": { "6": {} }, "parent": {} }],
-      ["status", { "_index": 21, "name": { "22": {} }, "parent": {} }],
-      ["takerfee", { "_index": 15, "name": { "16": {} }, "parent": {} }],
-      ["takerfeelimit", { "_index": 16, "name": { "17": {} }, "parent": {} }],
-      ["updatedat", { "_index": 20, "name": { "21": {} }, "parent": {} }],
-      ["url", { "_index": 8, "name": { "9": {}, "36": {} }, "parent": {} }],
-      ["withdrawal_fee", { "_index": 30, "name": { "31": {} }, "parent": {} }]
+      ["status", { "_index": 23, "name": { "24": {} }, "parent": {} }],
+      ["takerfee", { "_index": 17, "name": { "18": {} }, "parent": {} }],
+      ["takerfeelimit", { "_index": 18, "name": { "19": {} }, "parent": {} }],
+      ["updatedat", { "_index": 22, "name": { "23": {} }, "parent": {} }],
+      ["url", { "_index": 8, "name": { "9": {}, "46": {} }, "parent": {} }],
+      ["version", { "_index": 39, "name": { "41": {} }, "parent": {} }],
+      ["withdrawal_fee", { "_index": 32, "name": { "33": {} }, "parent": {} }]
     ],
     "pipeline": []
   }
