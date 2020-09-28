@@ -2,7 +2,12 @@ import assert from "assert";
 import nock from "nock";
 import fetch from "node-fetch";
 
-import { PublicClient, FetchError, ISupportedInstruments } from "../";
+import {
+  PublicClient,
+  FetchError,
+  ISupportedInstruments,
+  ISupportedAssets,
+} from "../";
 
 const url = "https://api.some-b2trader.exchange:9876/trading/1.1/";
 
@@ -42,6 +47,33 @@ suite("PublicClient", () => {
     nock(url).get(`/frontoffice/api/info`).delay(1).reply(200, response);
 
     const accounts = await client.getInstruments();
+    assert.deepStrictEqual(accounts, response);
+  });
+
+  test(".getAssets()", async () => {
+    const response: ISupportedAssets = {
+      data: [
+        {
+          id: "usd",
+          can_deposit: true,
+          can_withdraw: true,
+          asset_name: "USD",
+          withdrawal_fee: 0,
+          scale: 8,
+        },
+        {
+          id: "btc",
+          can_deposit: true,
+          can_withdraw: true,
+          asset_name: "Bitcoin",
+          withdrawal_fee: 0,
+          scale: 8,
+        },
+      ],
+    };
+    nock(url).get(`/frontoffice/api/assets-info`).delay(1).reply(200, response);
+
+    const accounts = await client.getAssets();
     assert.deepStrictEqual(accounts, response);
   });
 
