@@ -29,6 +29,7 @@
     "prettier": "prettier -c .",
     "prettier:write": "npm run prettier -- --write",
     "publish:test": "npm run prepublishOnly && npm pack --dry-run && npm run postpublish",
+    "release": "semantic-release",
     "snyk:protect": "snyk protect",
     "snyk:test": "snyk test",
     "test": "mocha -r ts-node/register --full-trace --ui tdd --bail --extension ts"
@@ -51,6 +52,9 @@
   "homepage": "https://github.com/b2broker/b2bx-node#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
     "@types/mocha": "^8.0.3",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
@@ -62,6 +66,7 @@
     "nock": "^13.0.4",
     "nyc": "^15.1.0",
     "prettier": "^2.1.2",
+    "semantic-release": "^17.1.2",
     "snyk": "^1.402.0",
     "ts-node": "^9.0.0",
     "typedoc": "^0.19.2",
