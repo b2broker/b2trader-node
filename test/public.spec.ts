@@ -7,6 +7,7 @@ import {
   FetchError,
   ISupportedInstruments,
   ISupportedAssets,
+  IOrderBookSnapshot,
 } from "../";
 
 const url = "https://api.some-b2trader.exchange:9876/trading/1.1/";
@@ -75,6 +76,26 @@ suite("PublicClient", () => {
 
     const accounts = await client.getAssets();
     assert.deepStrictEqual(accounts, response);
+  });
+
+  test(".getOrderBookSnapshot()", async () => {
+    const instrument = "btc_usd";
+    const response: IOrderBookSnapshot = {
+      instrument: "btc_usd",
+      bids: [{ amount: 0.19969415, price: 10861.173774 }],
+      asks: [{ amount: 0.3136669, price: 10865.246416 }],
+      version: 509444497,
+      askTotalAmount: 152.30721241,
+      bidTotalAmount: 123.3206466,
+      snapshot: true,
+    };
+    nock(url)
+      .get(`/marketdata/instruments/${instrument}/depth`)
+      .delay(1)
+      .reply(200, response);
+
+    const snapshot = await client.getOrderBookSnapshot({ instrument });
+    assert.deepStrictEqual(snapshot, response);
   });
 
   test(".fetch() (passes headers)", async () => {
