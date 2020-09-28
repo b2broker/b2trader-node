@@ -1,0 +1,218 @@
+{
+  "kinds": {
+    "128": "Class",
+    "256": "Interface",
+    "512": "Constructor",
+    "1024": "Property",
+    "2048": "Method",
+    "262144": "Accessor"
+  },
+  "rows": [
+    {
+      "id": 0,
+      "kind": 128,
+      "name": "FetchError",
+      "url": "classes/fetcherror.html",
+      "classes": "tsd-kind-class"
+    },
+    {
+      "id": 1,
+      "kind": 1024,
+      "name": "#response",
+      "url": "classes/fetcherror.html#_response",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-private",
+      "parent": "FetchError"
+    },
+    {
+      "id": 2,
+      "kind": 1024,
+      "name": "name",
+      "url": "classes/fetcherror.html#name",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-overwrite",
+      "parent": "FetchError"
+    },
+    {
+      "id": 3,
+      "kind": 512,
+      "name": "constructor",
+      "url": "classes/fetcherror.html#constructor",
+      "classes": "tsd-kind-constructor tsd-parent-kind-class",
+      "parent": "FetchError"
+    },
+    {
+      "id": 4,
+      "kind": 262144,
+      "name": "response",
+      "url": "classes/fetcherror.html#response",
+      "classes": "tsd-kind-get-signature tsd-parent-kind-class",
+      "parent": "FetchError"
+    },
+    {
+      "id": 5,
+      "kind": 1024,
+      "name": "message",
+      "url": "classes/fetcherror.html#message",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "FetchError"
+    },
+    {
+      "id": 6,
+      "kind": 1024,
+      "name": "stack",
+      "url": "classes/fetcherror.html#stack",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "FetchError"
+    },
+    {
+      "id": 7,
+      "kind": 1024,
+      "name": "Error",
+      "url": "classes/fetcherror.html#error",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-static",
+      "parent": "FetchError"
+    },
+    {
+      "id": 8,
+      "kind": 256,
+      "name": "IPublicClientOptions",
+      "url": "interfaces/ipublicclientoptions.html",
+      "classes": "tsd-kind-interface"
+    },
+    {
+      "id": 9,
+      "kind": 1024,
+      "name": "url",
+      "url": "interfaces/ipublicclientoptions.html#url",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "IPublicClientOptions"
+    },
+    {
+      "id": 10,
+      "kind": 128,
+      "name": "PublicClient",
+      "url": "classes/publicclient.html",
+      "classes": "tsd-kind-class"
+    },
+    {
+      "id": 11,
+      "kind": 1024,
+      "name": "url",
+      "url": "classes/publicclient.html#url",
+      "classes": "tsd-kind-property tsd-parent-kind-class",
+      "parent": "PublicClient"
+    },
+    {
+      "id": 12,
+      "kind": 512,
+      "name": "constructor",
+      "url": "classes/publicclient.html#constructor",
+      "classes": "tsd-kind-constructor tsd-parent-kind-class",
+      "parent": "PublicClient"
+    },
+    {
+      "id": 13,
+      "kind": 2048,
+      "name": "fetch",
+      "url": "classes/publicclient.html#fetch",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "PublicClient"
+    },
+    {
+      "id": 14,
+      "kind": 2048,
+      "name": "setQuery",
+      "url": "classes/publicclient.html#setquery",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "PublicClient"
+    },
+    {
+      "id": 15,
+      "kind": 2048,
+      "name": "fetch",
+      "url": "classes/publicclient.html#fetch-1",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "PublicClient"
+    }
+  ],
+  "index": {
+    "version": "2.3.9",
+    "fields": ["name", "parent"],
+    "fieldVectors": [
+      ["name/0", [0, 6.931]],
+      ["parent/0", []],
+      ["name/1", [1, 19.169]],
+      ["parent/1", [0, 0.633]],
+      ["name/2", [2, 24.277]],
+      ["parent/2", [0, 0.633]],
+      ["name/3", [3, 19.169]],
+      ["parent/3", [0, 0.633]],
+      ["name/4", [1, 19.169]],
+      ["parent/4", [0, 0.633]],
+      ["name/5", [4, 24.277]],
+      ["parent/5", [0, 0.633]],
+      ["name/6", [5, 24.277]],
+      ["parent/6", [0, 0.633]],
+      ["name/7", [6, 24.277]],
+      ["parent/7", [0, 0.633]],
+      ["name/8", [7, 19.169]],
+      ["parent/8", []],
+      ["name/9", [8, 19.169]],
+      ["parent/9", [7, 1.752]],
+      ["name/10", [9, 9.614]],
+      ["parent/10", []],
+      ["name/11", [8, 19.169]],
+      ["parent/11", [9, 0.878]],
+      ["name/12", [3, 19.169]],
+      ["parent/12", [9, 0.878]],
+      ["name/13", [10, 19.169]],
+      ["parent/13", [9, 0.878]],
+      ["name/14", [11, 24.277]],
+      ["parent/14", [9, 0.878]],
+      ["name/15", [10, 19.169]],
+      ["parent/15", [9, 0.878]]
+    ],
+    "invertedIndex": [
+      [
+        "constructor",
+        { "_index": 3, "name": { "3": {}, "12": {} }, "parent": {} }
+      ],
+      ["error", { "_index": 6, "name": { "7": {} }, "parent": {} }],
+      ["fetch", { "_index": 10, "name": { "13": {}, "15": {} }, "parent": {} }],
+      [
+        "fetcherror",
+        {
+          "_index": 0,
+          "name": { "0": {} },
+          "parent": {
+            "1": {},
+            "2": {},
+            "3": {},
+            "4": {},
+            "5": {},
+            "6": {},
+            "7": {}
+          }
+        }
+      ],
+      [
+        "ipublicclientoptions",
+        { "_index": 7, "name": { "8": {} }, "parent": { "9": {} } }
+      ],
+      ["message", { "_index": 4, "name": { "5": {} }, "parent": {} }],
+      ["name", { "_index": 2, "name": { "2": {} }, "parent": {} }],
+      [
+        "publicclient",
+        {
+          "_index": 9,
+          "name": { "10": {} },
+          "parent": { "11": {}, "12": {}, "13": {}, "14": {}, "15": {} }
+        }
+      ],
+      ["response", { "_index": 1, "name": { "1": {}, "4": {} }, "parent": {} }],
+      ["setquery", { "_index": 11, "name": { "14": {} }, "parent": {} }],
+      ["stack", { "_index": 5, "name": { "6": {} }, "parent": {} }],
+      ["url", { "_index": 8, "name": { "9": {}, "11": {} }, "parent": {} }]
+    ],
+    "pipeline": []
+  }
+}
