@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/b2broker/b2bx-node#readme",
   "devDependencies": {
+    "ts-node": "^9.0.0",
     "typedoc": "^0.19.2",
     "typescript": "^4.0.3"
   }
