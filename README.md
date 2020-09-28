@@ -24,6 +24,12 @@ const client = new PublicClient({ url });
 const instruments = await client.getInstruments();
 ```
 
+- `.getAssets()`
+
+```typescript
+const assets = await client.getAssets();
+```
+
 ## Test
 
 ```bash
