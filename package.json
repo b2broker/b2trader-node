@@ -12,6 +12,11 @@
     "lib": "build",
     "test": "test"
   },
+  "scripts": {
+    "build": "npm run build:remove && tsc",
+    "build:remove": "rm -rf ./build",
+    "build:test": "npm run build && npm run build:remove"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/b2broker/b2bx-node.git"
@@ -27,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/b2broker/b2bx-node/issues"
   },
-  "homepage": "https://github.com/b2broker/b2bx-node#readme"
+  "homepage": "https://github.com/b2broker/b2bx-node#readme",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
 }
