@@ -30,6 +30,13 @@ const instruments = await client.getInstruments();
 const assets = await client.getAssets();
 ```
 
+- `.getOrderBookSnapshot()`
+
+```typescript
+const instrument = "btc_usd";
+const snapshot = await client.getOrderBookSnapshot({ instrument });
+```
+
 ## Test
 
 ```bash
