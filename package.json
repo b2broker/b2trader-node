@@ -1,0 +1,31 @@
+{
+  "name": "@b2broker/b2bx",
+  "version": "1.0.0",
+  "description": "Node.js client for the B2BX exchange",
+  "main": "build/index.js",
+  "type": "commonjs",
+  "types": "build/index.d.ts",
+  "engines": {
+    "node": ">=12.18.4"
+  },
+  "directories": {
+    "lib": "build",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b2broker/b2bx-node.git"
+  },
+  "keywords": [
+    "B2BX",
+    "crypto",
+    "exchanhge",
+    "API"
+  ],
+  "author": "Sergey Bakulin <sbakulin@b2broker.net>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/b2broker/b2bx-node/issues"
+  },
+  "homepage": "https://github.com/b2broker/b2bx-node#readme"
+}
