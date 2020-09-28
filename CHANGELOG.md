@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.0](https://github.com/b2broker/b2trader-node/compare/v1.0.0...v1.1.0) (2020-09-28)
+
+### Features
+
+- add the `getInstruments` ([67d099b](https://github.com/b2broker/b2trader-node/commit/67d099baee3aab3f0826b6fde2180c1bc10ddd77))
+
 ## 1.0.0 (2020-09-28)
 
 ### Features
