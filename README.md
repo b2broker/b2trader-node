@@ -18,6 +18,12 @@ const url = "https://api.b2bx.exchange:8443/trading"; // B2Trader's url
 const client = new PublicClient({ url });
 ```
 
+- `.getInstruments()`
+
+```typescript
+const instruments = await client.getInstruments();
+```
+
 ## Test
 
 ```bash
