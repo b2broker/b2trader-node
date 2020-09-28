@@ -16,6 +16,7 @@
     "build": "npm run build:remove && tsc",
     "build:remove": "rm -rf ./build",
     "build:test": "npm run build && npm run build:remove",
+    "ci:all": "npm ci && npm run prettier && npm run lint && npm test && npm run publish:test && npm run docs:test && npm audit && npm run coverage",
     "commitlint": "commitlint --verbose",
     "commitlint:all": "npm run commitlint -- --from=$( git rev-list --max-parents=0 $( git rev-parse --abbrev-ref HEAD ) )",
     "coverage": "nyc npm test && nyc report --reporter=lcov",
