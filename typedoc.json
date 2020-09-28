@@ -1,0 +1,8 @@
+{
+  "out": "docs",
+  "mode": "file",
+  "name": "b2trader",
+  "exclude": "**/*.spec.ts",
+  "hideGenerator": true,
+  "includeVersion": true
+}

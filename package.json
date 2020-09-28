@@ -1,0 +1,80 @@
+{
+  "name": "b2trader",
+  "version": "1.0.0",
+  "description": "Node.js client for the B2Trader",
+  "main": "build/index.js",
+  "type": "commonjs",
+  "types": "build/index.d.ts",
+  "engines": {
+    "node": ">=12.18.4"
+  },
+  "directories": {
+    "lib": "build",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm run build:remove && tsc",
+    "build:remove": "rm -rf ./build",
+    "build:test": "npm run build && npm run build:remove",
+    "ci:all": "npm ci && npm run prettier && npm run lint && npm test && npm run publish:test && npm run docs:test && npm audit && npm run coverage",
+    "commitlint": "commitlint --verbose",
+    "commitlint:all": "npm run commitlint -- --from=$( git rev-list --max-parents=0 $( git rev-parse --abbrev-ref HEAD ) )",
+    "coverage": "nyc npm test && nyc report --reporter=lcov",
+    "docs:build": "npm run docs:remove && typedoc && npm run lint:fix && npm run prettier:write -- --ignore-path .prettierignore_docs",
+    "docs:remove": "rm -rf ./docs",
+    "docs:test": "npm run docs:build && npm run docs:remove",
+    "install:clean": "rm -fr node_modules && rm -f package-lock.json && npm install",
+    "lint": "eslint --ext .ts,.js ./",
+    "lint:fix": "npm run lint -- --fix",
+    "postpublish": "npm run build:remove",
+    "prepublishOnly": "npm run build && npm run lint:fix && npm run prettier:write",
+    "prettier": "prettier -c .",
+    "prettier:write": "npm run prettier -- --write",
+    "publish:test": "npm run prepublishOnly && npm pack --dry-run && npm run postpublish",
+    "release": "semantic-release",
+    "snyk:protect": "snyk protect",
+    "snyk:test": "snyk test",
+    "test": "mocha -r ts-node/register --full-trace --ui tdd --bail --extension ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b2broker/b2trader-node.git"
+  },
+  "keywords": [
+    "B2Trader",
+    "crypto",
+    "exchanhge",
+    "API"
+  ],
+  "author": "Sergey Bakulin <sbakulin@b2broker.net>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/b2broker/b2trader-node/issues"
+  },
+  "homepage": "https://github.com/b2broker/b2trader-node#readme",
+  "dependencies": {
+    "node-fetch": "3.0.0-beta.9"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@types/mocha": "^8.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "commitlint": "^11.0.0",
+    "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "mocha": "^8.1.3",
+    "nock": "^13.0.4",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2",
+    "semantic-release": "^17.1.2",
+    "snyk": "^1.402.0",
+    "ts-node": "^9.0.0",
+    "typedoc": "^0.19.2",
+    "typescript": "^4.0.3"
+  }
+}
