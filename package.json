@@ -19,8 +19,13 @@
     "docs:build": "npm run docs:remove && typedoc && npm run lint:fix && npm run prettier:write -- --ignore-path .prettierignore_docs",
     "docs:remove": "rm -rf ./docs",
     "docs:test": "npm run docs:build && npm run docs:remove",
+    "lint": "eslint --ext .ts,.js ./",
+    "lint:fix": "npm run lint -- --fix",
+    "postpublish": "npm run build:remove",
+    "prepublishOnly": "npm run build && npm run lint:fix && npm run prettier:write",
     "prettier": "prettier -c .",
     "prettier:write": "npm run prettier -- --write",
+    "publish:test": "npm run prepublishOnly && npm pack --dry-run && npm run postpublish",
     "snyk:protect": "snyk protect",
     "snyk:test": "snyk test"
   },
@@ -41,6 +46,9 @@
   },
   "homepage": "https://github.com/b2broker/b2bx-node#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.10.0",
     "prettier": "^2.1.2",
     "snyk": "^1.402.0",
     "ts-node": "^9.0.0",
