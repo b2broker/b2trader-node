@@ -1,6 +1,6 @@
 {
   "name": "b2trader",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Node.js client for the B2Trader",
   "main": "build/index.js",
   "type": "commonjs",

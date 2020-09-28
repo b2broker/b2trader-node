@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://github.com/b2broker/b2trader-node/compare/v1.1.0...v1.2.0) (2020-09-28)
+
+### Features
+
+- add the `getAssets` method ([9812985](https://github.com/b2broker/b2trader-node/commit/9812985c09902410e7ec81bfdfe2ac9c5391545f))
+
 ## [1.1.0](https://github.com/b2broker/b2trader-node/compare/v1.0.0...v1.1.0) (2020-09-28)
 
 ### Features

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>IPublicClientOptions | b2trader - v1.2.0</title>
+    <title>IAsset | b2trader - v1.2.0</title>
     <meta name="description" content="Documentation for b2trader - v1.2.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -78,10 +78,10 @@
               <a href="../globals.html">Globals</a>
             </li>
             <li>
-              <a href="ipublicclientoptions.html">IPublicClientOptions</a>
+              <a href="iasset.html">IAsset</a>
             </li>
           </ul>
-          <h1>Interface IPublicClientOptions</h1>
+          <h1>Interface IAsset</h1>
         </div>
       </div>
     </header>
@@ -92,7 +92,7 @@
             <h3>Hierarchy</h3>
             <ul class="tsd-hierarchy">
               <li>
-                <span class="target">IPublicClientOptions</span>
+                <span class="target">IAsset</span>
               </li>
             </ul>
           </section>
@@ -104,10 +104,31 @@
                   <h3>Properties</h3>
                   <ul class="tsd-index-list">
                     <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="ipublicclientoptions.html#url"
-                        class="tsd-kind-icon"
-                        >url</a
+                      <a href="iasset.html#asset_name" class="tsd-kind-icon"
+                        >asset_<wbr />name</a
+                      >
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="iasset.html#can_deposit" class="tsd-kind-icon"
+                        >can_<wbr />deposit</a
+                      >
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="iasset.html#can_withdraw" class="tsd-kind-icon"
+                        >can_<wbr />withdraw</a
+                      >
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="iasset.html#id" class="tsd-kind-icon">id</a>
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="iasset.html#scale" class="tsd-kind-icon"
+                        >scale</a
+                      >
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="iasset.html#withdrawal_fee" class="tsd-kind-icon"
+                        >withdrawal_<wbr />fee</a
                       >
                     </li>
                   </ul>
@@ -120,21 +141,124 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="url" class="tsd-anchor"></a>
-              <h3>url</h3>
+              <a name="asset_name" class="tsd-anchor"></a>
+              <h3>asset_<wbr />name</h3>
               <div class="tsd-signature tsd-kind-icon">
-                url<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">URL</span>
+                asset_<wbr />name<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">string</span>
               </div>
               <aside class="tsd-sources">
                 <ul>
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/1fb2772/src/public.ts#L5"
-                      >src/public.ts:5</a
+                      href="https://github.com/b2broker/b2trader-node/blob/1fb2772/src/public.ts#L32"
+                      >src/public.ts:32</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="can_deposit" class="tsd-anchor"></a>
+              <h3>can_<wbr />deposit</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                can_<wbr />deposit<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">boolean</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/1fb2772/src/public.ts#L30"
+                      >src/public.ts:30</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="can_withdraw" class="tsd-anchor"></a>
+              <h3>can_<wbr />withdraw</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                can_<wbr />withdraw<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">boolean</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/1fb2772/src/public.ts#L31"
+                      >src/public.ts:31</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="id" class="tsd-anchor"></a>
+              <h3>id</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                id<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">string</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/1fb2772/src/public.ts#L29"
+                      >src/public.ts:29</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="scale" class="tsd-anchor"></a>
+              <h3>scale</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                scale<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">number</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/1fb2772/src/public.ts#L34"
+                      >src/public.ts:34</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="withdrawal_fee" class="tsd-anchor"></a>
+              <h3>withdrawal_<wbr />fee</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                withdrawal_<wbr />fee<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">number</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/1fb2772/src/public.ts#L33"
+                      >src/public.ts:33</a
                     >
                   </li>
                 </ul>
@@ -162,30 +286,49 @@
                   >Public<wbr />Client</a
                 >
               </li>
-              <li class="tsd-kind-interface">
-                <a href="iasset.html" class="tsd-kind-icon">IAsset</a>
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="iinstrument.html" class="tsd-kind-icon">IInstrument</a>
-              </li>
             </ul>
             <ul class="current">
               <li class="current tsd-kind-interface">
-                <a href="ipublicclientoptions.html" class="tsd-kind-icon"
-                  >IPublic<wbr />Client<wbr />Options</a
-                >
+                <a href="iasset.html" class="tsd-kind-icon">IAsset</a>
                 <ul>
                   <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a
-                      href="ipublicclientoptions.html#url"
-                      class="tsd-kind-icon"
-                      >url</a
+                    <a href="iasset.html#asset_name" class="tsd-kind-icon"
+                      >asset_<wbr />name</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="iasset.html#can_deposit" class="tsd-kind-icon"
+                      >can_<wbr />deposit</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="iasset.html#can_withdraw" class="tsd-kind-icon"
+                      >can_<wbr />withdraw</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="iasset.html#id" class="tsd-kind-icon">id</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="iasset.html#scale" class="tsd-kind-icon">scale</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="iasset.html#withdrawal_fee" class="tsd-kind-icon"
+                      >withdrawal_<wbr />fee</a
                     >
                   </li>
                 </ul>
               </li>
             </ul>
             <ul class="after-current">
+              <li class="tsd-kind-interface">
+                <a href="iinstrument.html" class="tsd-kind-icon">IInstrument</a>
+              </li>
+              <li class="tsd-kind-interface">
+                <a href="ipublicclientoptions.html" class="tsd-kind-icon"
+                  >IPublic<wbr />Client<wbr />Options</a
+                >
+              </li>
               <li class="tsd-kind-interface">
                 <a href="isupportedassets.html" class="tsd-kind-icon"
                   >ISupported<wbr />Assets</a
