@@ -5,6 +5,26 @@ export interface IPublicClientOptions {
   url: string | URL;
 }
 
+export interface IInstrument {
+  baseAsset: string;
+  quoteAsset: string;
+  hidden: 0 | 1;
+  makerFee: number;
+  makerFeeLimit: number;
+  takerFee: number;
+  takerFeeLimit: number;
+  priceScale: number;
+  amountScale: number;
+  createdAt: string;
+  updatedAt: string;
+  status: "Open" | "Paused" | "Halted";
+}
+
+export interface ISupportedInstruments {
+  serverTime: number;
+  pairs: Record<string, IInstrument | undefined>;
+}
+
 export class PublicClient {
   public readonly url: URL;
 
@@ -13,6 +33,15 @@ export class PublicClient {
     if (!this.url.pathname.endsWith("/")) {
       this.url.pathname += "/";
     }
+  }
+
+  /**
+   * Get the list of all supported instruments
+   */
+  public async getInstruments(): Promise<ISupportedInstruments> {
+    const path = "/frontoffice/api/info";
+    const instruments = (await this.fetch(path)) as ISupportedInstruments;
+    return instruments;
   }
 
   /**
