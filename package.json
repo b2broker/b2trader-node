@@ -19,6 +19,8 @@
     "docs:build": "npm run docs:remove && typedoc && npm run lint:fix && npm run prettier:write -- --ignore-path .prettierignore_docs",
     "docs:remove": "rm -rf ./docs",
     "docs:test": "npm run docs:build && npm run docs:remove",
+    "prettier": "prettier -c .",
+    "prettier:write": "npm run prettier -- --write",
     "snyk:protect": "snyk protect",
     "snyk:test": "snyk test"
   },
@@ -39,6 +41,7 @@
   },
   "homepage": "https://github.com/b2broker/b2bx-node#readme",
   "devDependencies": {
+    "prettier": "^2.1.2",
     "snyk": "^1.402.0",
     "ts-node": "^9.0.0",
     "typedoc": "^0.19.2",
