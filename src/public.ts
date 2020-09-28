@@ -5,6 +5,10 @@ export interface IPublicClientOptions {
   url: string | URL;
 }
 
+export interface IOrderBookSnapshotOptions {
+  instrument: string;
+}
+
 export interface IInstrument {
   baseAsset: string;
   quoteAsset: string;
@@ -38,6 +42,16 @@ export interface ISupportedAssets {
   data: IAsset[];
 }
 
+export interface IOrderBookSnapshot {
+  instrument: string;
+  bids: { amount: number; price: number }[];
+  asks: { amount: number; price: number }[];
+  version: number;
+  askTotalAmount: number;
+  bidTotalAmount: number;
+  snapshot: true;
+}
+
 export class PublicClient {
   public readonly url: URL;
 
@@ -64,6 +78,17 @@ export class PublicClient {
     const path = "/frontoffice/api/assets-info";
     const assets = (await this.fetch(path)) as ISupportedAssets;
     return assets;
+  }
+
+  /**
+   * Get the order book snapshot
+   */
+  public async getOrderBookSnapshot({
+    instrument,
+  }: IOrderBookSnapshotOptions): Promise<IOrderBookSnapshot> {
+    const path = `/marketdata/instruments/${instrument}/depth`;
+    const snapshot = (await this.fetch(path)) as IOrderBookSnapshot;
+    return snapshot;
   }
 
   /**
