@@ -45,7 +45,7 @@ suite("PublicClient", () => {
         },
       },
     };
-    nock(url).get(`/frontoffice/api/info`).delay(1).reply(200, response);
+    nock(url).get(`/frontoffice/api/info/`).delay(1).reply(200, response);
 
     const accounts = await client.getInstruments();
     assert.deepStrictEqual(accounts, response);
@@ -72,7 +72,10 @@ suite("PublicClient", () => {
         },
       ],
     };
-    nock(url).get(`/frontoffice/api/assets-info`).delay(1).reply(200, response);
+    nock(url)
+      .get(`/frontoffice/api/assets-info/`)
+      .delay(1)
+      .reply(200, response);
 
     const accounts = await client.getAssets();
     assert.deepStrictEqual(accounts, response);
@@ -90,7 +93,7 @@ suite("PublicClient", () => {
       snapshot: true,
     };
     nock(url)
-      .get(`/marketdata/instruments/${instrument}/depth`)
+      .get(`/marketdata/instruments/${instrument}/depth/`)
       .delay(1)
       .reply(200, response);
 

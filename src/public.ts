@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import { URL } from "url";
 import FetchError from "./error";
 
 export interface IPublicClientOptions {
@@ -66,7 +67,7 @@ export class PublicClient {
    * Get the list of all supported instruments
    */
   public async getInstruments(): Promise<ISupportedInstruments> {
-    const path = "/frontoffice/api/info";
+    const path = "/frontoffice/api/info/";
     const url = this.resolveURL(path);
     const instruments = (await this.fetch(url)) as ISupportedInstruments;
     return instruments;
@@ -76,7 +77,7 @@ export class PublicClient {
    * Get the list of all supported assets
    */
   public async getAssets(): Promise<ISupportedAssets> {
-    const path = "/frontoffice/api/assets-info";
+    const path = "/frontoffice/api/assets-info/";
     const url = this.resolveURL(path);
     const assets = (await this.fetch(url)) as ISupportedAssets;
     return assets;
@@ -88,7 +89,7 @@ export class PublicClient {
   public async getOrderBookSnapshot({
     instrument,
   }: IOrderBookSnapshotOptions): Promise<IOrderBookSnapshot> {
-    const path = `/marketdata/instruments/${instrument}/depth`;
+    const path = `/marketdata/instruments/${instrument}/depth/`;
     const url = this.resolveURL(path);
     const snapshot = (await this.fetch(url)) as IOrderBookSnapshot;
     return snapshot;
