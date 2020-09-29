@@ -30,6 +30,12 @@ const instruments = await client.getInstruments();
 const assets = await client.getAssets();
 ```
 
+- `.getListOfInstruments()`
+
+```typescript
+const instruments = await client.getListOfInstruments();
+```
+
 - `.getOrderBookSnapshot()`
 
 ```typescript
