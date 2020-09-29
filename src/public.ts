@@ -178,7 +178,7 @@ export class PublicClient {
 
   private resolveURL(path: string): URL {
     const url = new URL(this.url.toString());
-    url.pathname += path.startsWith("/") ? path.substring(1) : path;
+    url.pathname += path.substring(1);
     return url;
   }
 
