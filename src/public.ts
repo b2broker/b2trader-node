@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import { URL } from "url";
 import FetchError from "./error";
 
 export interface IPublicClientOptions {
@@ -7,6 +8,27 @@ export interface IPublicClientOptions {
 
 export interface IOrderBookSnapshotOptions {
   instrument: string;
+}
+
+export type ICandleSize =
+  | "1m"
+  | "5m"
+  | "15m"
+  | "30m"
+  | "1h"
+  | "2h"
+  | "4h"
+  | "8h"
+  | "12h"
+  | "1d"
+  | "1w"
+  | "1M";
+
+export interface ICandlesOptions extends IOrderBookSnapshotOptions {
+  startDate: string;
+  endDate: string;
+  type?: ICandleSize;
+  count?: number;
 }
 
 export interface IInstrument {
@@ -52,6 +74,26 @@ export interface IOrderBookSnapshot {
   snapshot: true;
 }
 
+export interface ICandle {
+  instrument: string;
+  start: string;
+  end: string;
+  low: number;
+  high: number;
+  volume: number;
+  quoteVolume: number;
+  open: number;
+  close: number;
+}
+
+export interface ICandlesResponse {
+  success: true;
+  instrument: string;
+  data: ICandle[];
+  startDateTime: string;
+  endDateTime: string;
+}
+
 export class PublicClient {
   public readonly url: URL;
 
@@ -66,8 +108,9 @@ export class PublicClient {
    * Get the list of all supported instruments
    */
   public async getInstruments(): Promise<ISupportedInstruments> {
-    const path = "/frontoffice/api/info";
-    const instruments = (await this.fetch(path)) as ISupportedInstruments;
+    const path = "/frontoffice/api/info/";
+    const url = this.resolveURL(path);
+    const instruments = (await this.fetch(url)) as ISupportedInstruments;
     return instruments;
   }
 
@@ -75,9 +118,20 @@ export class PublicClient {
    * Get the list of all supported assets
    */
   public async getAssets(): Promise<ISupportedAssets> {
-    const path = "/frontoffice/api/assets-info";
-    const assets = (await this.fetch(path)) as ISupportedAssets;
+    const path = "/frontoffice/api/assets-info/";
+    const url = this.resolveURL(path);
+    const assets = (await this.fetch(url)) as ISupportedAssets;
     return assets;
+  }
+
+  /**
+   * Get the list of all supported instruments
+   */
+  public async getListOfInstruments(): Promise<string[]> {
+    const path = "/marketdata/instruments/";
+    const url = this.resolveURL(path);
+    const instruments = (await this.fetch(url)) as string[];
+    return instruments;
   }
 
   /**
@@ -86,27 +140,46 @@ export class PublicClient {
   public async getOrderBookSnapshot({
     instrument,
   }: IOrderBookSnapshotOptions): Promise<IOrderBookSnapshot> {
-    const path = `/marketdata/instruments/${instrument}/depth`;
-    const snapshot = (await this.fetch(path)) as IOrderBookSnapshot;
+    const path = `/marketdata/instruments/${instrument}/depth/`;
+    const url = this.resolveURL(path);
+    const snapshot = (await this.fetch(url)) as IOrderBookSnapshot;
     return snapshot;
+  }
+
+  /**
+   * Get historic rates
+   */
+  public async getCandles({
+    instrument,
+    ...qs
+  }: ICandlesOptions): Promise<ICandlesResponse> {
+    const path = `/marketdata/instruments/${instrument}/history/`;
+    const url = this.resolveURL(path);
+    PublicClient.setQuery(url, { ...qs });
+    const candles = (await this.fetch(url)) as ICandlesResponse;
+    return candles;
   }
 
   /**
    * Make a request and parse the body as JSON
    */
   public async fetch(
-    path: string,
+    url: string | URL,
     { headers, ...options }: fetch.RequestInit = {}
   ): Promise<unknown> {
     const jsonHeaders = new fetch.Headers(headers);
     jsonHeaders.set("Content-Type", "application/json");
-    const url = new URL(this.url.toString());
-    url.pathname += path.startsWith("/") ? path.substring(1) : path;
     const response = await PublicClient.fetch(url, {
       headers: jsonHeaders,
       ...options,
     });
     return response;
+  }
+
+  private resolveURL(path: string): URL {
+    const url = new URL(this.url.toString());
+    url.pathname += path.substring(1);
+    return url;
   }
 
   /**
