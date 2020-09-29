@@ -8,6 +8,7 @@ import {
   ISupportedInstruments,
   ISupportedAssets,
   IOrderBookSnapshot,
+  ICandlesResponse,
 } from "../";
 
 const url = "https://api.some-b2trader.exchange:9876/trading/1.1/";
@@ -107,6 +108,58 @@ suite("PublicClient", () => {
 
     const snapshot = await client.getOrderBookSnapshot({ instrument });
     assert.deepStrictEqual(snapshot, response);
+  });
+
+  test(".getCandles()", async () => {
+    const instrument = "btc_usd";
+    const startDate = "2020-01-24T07:26:04";
+    const endDate = "2020-09-29T07:26:04";
+    const type = "1m";
+    const count = 2;
+    const response: ICandlesResponse = {
+      success: true,
+      instrument: "btc_usd",
+      data: [
+        {
+          instrument: "btc_usd",
+          start: "2020-09-29T07:25:00Z",
+          end: "2020-09-29T07:26:00Z",
+          low: 10707.7998402,
+          high: 10708.35065057,
+          volume: 0.1041,
+          quoteVolume: 1114.70062981,
+          open: 10707.89451073,
+          close: 10708.35065057,
+        },
+        {
+          instrument: "btc_usd",
+          start: "2020-09-29T07:26:00Z",
+          end: "2020-09-29T07:27:00Z",
+          low: 10707.63631837,
+          high: 10707.99196836,
+          volume: 0.0716,
+          quoteVolume: 766.68098639,
+          open: 10707.63631837,
+          close: 10707.99196836,
+        },
+      ],
+      startDateTime: "2020-09-29T07:25:00Z",
+      endDateTime: "2020-09-29T07:27:00Z",
+    };
+    nock(url)
+      .get(`/marketdata/instruments/${instrument}/history/`)
+      .query({ startDate, endDate, type, count })
+      .delay(1)
+      .reply(200, response);
+
+    const candles = await client.getCandles({
+      instrument,
+      startDate,
+      endDate,
+      type,
+      count,
+    });
+    assert.deepStrictEqual(candles, response);
   });
 
   test(".fetch() (passes headers)", async () => {
