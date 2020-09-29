@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>IInstrument | b2trader - v1.4.0</title>
+    <title>ICandle | b2trader - v1.4.0</title>
     <meta name="description" content="Documentation for b2trader - v1.4.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -78,10 +78,10 @@
               <a href="../globals.html">Globals</a>
             </li>
             <li>
-              <a href="iinstrument.html">IInstrument</a>
+              <a href="icandle.html">ICandle</a>
             </li>
           </ul>
-          <h1>Interface IInstrument</h1>
+          <h1>Interface ICandle</h1>
         </div>
       </div>
     </header>
@@ -92,7 +92,7 @@
             <h3>Hierarchy</h3>
             <ul class="tsd-hierarchy">
               <li>
-                <span class="target">IInstrument</span>
+                <span class="target">ICandle</span>
               </li>
             </ul>
           </section>
@@ -104,73 +104,40 @@
                   <h3>Properties</h3>
                   <ul class="tsd-index-list">
                     <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="iinstrument.html#amountscale"
-                        class="tsd-kind-icon"
-                        >amount<wbr />Scale</a
+                      <a href="icandle.html#close" class="tsd-kind-icon"
+                        >close</a
                       >
                     </li>
                     <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a href="iinstrument.html#baseasset" class="tsd-kind-icon"
-                        >base<wbr />Asset</a
+                      <a href="icandle.html#end" class="tsd-kind-icon">end</a>
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="icandle.html#high" class="tsd-kind-icon">high</a>
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="icandle.html#instrument" class="tsd-kind-icon"
+                        >instrument</a
                       >
                     </li>
                     <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a href="iinstrument.html#createdat" class="tsd-kind-icon"
-                        >created<wbr />At</a
+                      <a href="icandle.html#low" class="tsd-kind-icon">low</a>
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="icandle.html#open" class="tsd-kind-icon">open</a>
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a href="icandle.html#quotevolume" class="tsd-kind-icon"
+                        >quote<wbr />Volume</a
                       >
                     </li>
                     <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a href="iinstrument.html#hidden" class="tsd-kind-icon"
-                        >hidden</a
+                      <a href="icandle.html#start" class="tsd-kind-icon"
+                        >start</a
                       >
                     </li>
                     <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a href="iinstrument.html#makerfee" class="tsd-kind-icon"
-                        >maker<wbr />Fee</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="iinstrument.html#makerfeelimit"
-                        class="tsd-kind-icon"
-                        >maker<wbr />Fee<wbr />Limit</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="iinstrument.html#pricescale"
-                        class="tsd-kind-icon"
-                        >price<wbr />Scale</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="iinstrument.html#quoteasset"
-                        class="tsd-kind-icon"
-                        >quote<wbr />Asset</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a href="iinstrument.html#status" class="tsd-kind-icon"
-                        >status</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a href="iinstrument.html#takerfee" class="tsd-kind-icon"
-                        >taker<wbr />Fee</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="iinstrument.html#takerfeelimit"
-                        class="tsd-kind-icon"
-                        >taker<wbr />Fee<wbr />Limit</a
-                      >
-                    </li>
-                    <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a href="iinstrument.html#updatedat" class="tsd-kind-icon"
-                        >updated<wbr />At</a
+                      <a href="icandle.html#volume" class="tsd-kind-icon"
+                        >volume</a
                       >
                     </li>
                   </ul>
@@ -183,10 +150,10 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="amountscale" class="tsd-anchor"></a>
-              <h3>amount<wbr />Scale</h3>
+              <a name="close" class="tsd-anchor"></a>
+              <h3>close</h3>
               <div class="tsd-signature tsd-kind-icon">
-                amount<wbr />Scale<span class="tsd-signature-symbol">:</span>
+                close<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">number</span>
               </div>
               <aside class="tsd-sources">
@@ -194,8 +161,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L43"
-                      >src/public.ts:43</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L86"
+                      >src/public.ts:86</a
                     >
                   </li>
                 </ul>
@@ -204,10 +171,10 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="baseasset" class="tsd-anchor"></a>
-              <h3>base<wbr />Asset</h3>
+              <a name="end" class="tsd-anchor"></a>
+              <h3>end</h3>
               <div class="tsd-signature tsd-kind-icon">
-                base<wbr />Asset<span class="tsd-signature-symbol">:</span>
+                end<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">string</span>
               </div>
               <aside class="tsd-sources">
@@ -215,8 +182,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L35"
-                      >src/public.ts:35</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L80"
+                      >src/public.ts:80</a
                     >
                   </li>
                 </ul>
@@ -225,10 +192,31 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="createdat" class="tsd-anchor"></a>
-              <h3>created<wbr />At</h3>
+              <a name="high" class="tsd-anchor"></a>
+              <h3>high</h3>
               <div class="tsd-signature tsd-kind-icon">
-                created<wbr />At<span class="tsd-signature-symbol">:</span>
+                high<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">number</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L82"
+                      >src/public.ts:82</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="instrument" class="tsd-anchor"></a>
+              <h3>instrument</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                instrument<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">string</span>
               </div>
               <aside class="tsd-sources">
@@ -236,8 +224,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L44"
-                      >src/public.ts:44</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L78"
+                      >src/public.ts:78</a
                     >
                   </li>
                 </ul>
@@ -246,33 +234,10 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="hidden" class="tsd-anchor"></a>
-              <h3>hidden</h3>
+              <a name="low" class="tsd-anchor"></a>
+              <h3>low</h3>
               <div class="tsd-signature tsd-kind-icon">
-                hidden<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">0</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">1</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L37"
-                      >src/public.ts:37</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
-            >
-              <a name="makerfee" class="tsd-anchor"></a>
-              <h3>maker<wbr />Fee</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                maker<wbr />Fee<span class="tsd-signature-symbol">:</span>
+                low<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">number</span>
               </div>
               <aside class="tsd-sources">
@@ -280,8 +245,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L38"
-                      >src/public.ts:38</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L81"
+                      >src/public.ts:81</a
                     >
                   </li>
                 </ul>
@@ -290,12 +255,10 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="makerfeelimit" class="tsd-anchor"></a>
-              <h3>maker<wbr />Fee<wbr />Limit</h3>
+              <a name="open" class="tsd-anchor"></a>
+              <h3>open</h3>
               <div class="tsd-signature tsd-kind-icon">
-                maker<wbr />Fee<wbr />Limit<span class="tsd-signature-symbol"
-                  >:</span
-                >
+                open<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">number</span>
               </div>
               <aside class="tsd-sources">
@@ -303,8 +266,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L39"
-                      >src/public.ts:39</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L85"
+                      >src/public.ts:85</a
                     >
                   </li>
                 </ul>
@@ -313,10 +276,10 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="pricescale" class="tsd-anchor"></a>
-              <h3>price<wbr />Scale</h3>
+              <a name="quotevolume" class="tsd-anchor"></a>
+              <h3>quote<wbr />Volume</h3>
               <div class="tsd-signature tsd-kind-icon">
-                price<wbr />Scale<span class="tsd-signature-symbol">:</span>
+                quote<wbr />Volume<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">number</span>
               </div>
               <aside class="tsd-sources">
@@ -324,8 +287,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L42"
-                      >src/public.ts:42</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L84"
+                      >src/public.ts:84</a
                     >
                   </li>
                 </ul>
@@ -334,10 +297,10 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="quoteasset" class="tsd-anchor"></a>
-              <h3>quote<wbr />Asset</h3>
+              <a name="start" class="tsd-anchor"></a>
+              <h3>start</h3>
               <div class="tsd-signature tsd-kind-icon">
-                quote<wbr />Asset<span class="tsd-signature-symbol">:</span>
+                start<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">string</span>
               </div>
               <aside class="tsd-sources">
@@ -345,8 +308,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L36"
-                      >src/public.ts:36</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L79"
+                      >src/public.ts:79</a
                     >
                   </li>
                 </ul>
@@ -355,35 +318,10 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="status" class="tsd-anchor"></a>
-              <h3>status</h3>
+              <a name="volume" class="tsd-anchor"></a>
+              <h3>volume</h3>
               <div class="tsd-signature tsd-kind-icon">
-                status<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">"Open"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"Paused"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"Halted"</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L46"
-                      >src/public.ts:46</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
-            >
-              <a name="takerfee" class="tsd-anchor"></a>
-              <h3>taker<wbr />Fee</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                taker<wbr />Fee<span class="tsd-signature-symbol">:</span>
+                volume<span class="tsd-signature-symbol">:</span>
                 <span class="tsd-signature-type">number</span>
               </div>
               <aside class="tsd-sources">
@@ -391,52 +329,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L40"
-                      >src/public.ts:40</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
-            >
-              <a name="takerfeelimit" class="tsd-anchor"></a>
-              <h3>taker<wbr />Fee<wbr />Limit</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                taker<wbr />Fee<wbr />Limit<span class="tsd-signature-symbol"
-                  >:</span
-                >
-                <span class="tsd-signature-type">number</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L41"
-                      >src/public.ts:41</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
-            >
-              <a name="updatedat" class="tsd-anchor"></a>
-              <h3>updated<wbr />At</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                updated<wbr />At<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L45"
-                      >src/public.ts:45</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L83"
+                      >src/public.ts:83</a
                     >
                   </li>
                 </ul>
@@ -467,9 +361,48 @@
               <li class="tsd-kind-interface">
                 <a href="iasset.html" class="tsd-kind-icon">IAsset</a>
               </li>
-              <li class="tsd-kind-interface">
+            </ul>
+            <ul class="current">
+              <li class="current tsd-kind-interface">
                 <a href="icandle.html" class="tsd-kind-icon">ICandle</a>
+                <ul>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#close" class="tsd-kind-icon">close</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#end" class="tsd-kind-icon">end</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#high" class="tsd-kind-icon">high</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#instrument" class="tsd-kind-icon"
+                      >instrument</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#low" class="tsd-kind-icon">low</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#open" class="tsd-kind-icon">open</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#quotevolume" class="tsd-kind-icon"
+                      >quote<wbr />Volume</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#start" class="tsd-kind-icon">start</a>
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandle.html#volume" class="tsd-kind-icon"
+                      >volume</a
+                    >
+                  </li>
+                </ul>
               </li>
+            </ul>
+            <ul class="after-current">
               <li class="tsd-kind-interface">
                 <a href="icandlesoptions.html" class="tsd-kind-icon"
                   >ICandles<wbr />Options</a
@@ -480,79 +413,9 @@
                   >ICandles<wbr />Response</a
                 >
               </li>
-            </ul>
-            <ul class="current">
-              <li class="current tsd-kind-interface">
+              <li class="tsd-kind-interface">
                 <a href="iinstrument.html" class="tsd-kind-icon">IInstrument</a>
-                <ul>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#amountscale" class="tsd-kind-icon"
-                      >amount<wbr />Scale</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#baseasset" class="tsd-kind-icon"
-                      >base<wbr />Asset</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#createdat" class="tsd-kind-icon"
-                      >created<wbr />At</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#hidden" class="tsd-kind-icon"
-                      >hidden</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#makerfee" class="tsd-kind-icon"
-                      >maker<wbr />Fee</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a
-                      href="iinstrument.html#makerfeelimit"
-                      class="tsd-kind-icon"
-                      >maker<wbr />Fee<wbr />Limit</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#pricescale" class="tsd-kind-icon"
-                      >price<wbr />Scale</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#quoteasset" class="tsd-kind-icon"
-                      >quote<wbr />Asset</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#status" class="tsd-kind-icon"
-                      >status</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#takerfee" class="tsd-kind-icon"
-                      >taker<wbr />Fee</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a
-                      href="iinstrument.html#takerfeelimit"
-                      class="tsd-kind-icon"
-                      >taker<wbr />Fee<wbr />Limit</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a href="iinstrument.html#updatedat" class="tsd-kind-icon"
-                      >updated<wbr />At</a
-                    >
-                  </li>
-                </ul>
               </li>
-            </ul>
-            <ul class="after-current">
               <li class="tsd-kind-interface">
                 <a href="iorderbooksnapshot.html" class="tsd-kind-icon"
                   >IOrder<wbr />Book<wbr />Snapshot</a

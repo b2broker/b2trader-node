@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ISupportedInstruments | b2trader - v1.4.0</title>
+    <title>ICandlesResponse | b2trader - v1.4.0</title>
     <meta name="description" content="Documentation for b2trader - v1.4.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -78,10 +78,10 @@
               <a href="../globals.html">Globals</a>
             </li>
             <li>
-              <a href="isupportedinstruments.html">ISupportedInstruments</a>
+              <a href="icandlesresponse.html">ICandlesResponse</a>
             </li>
           </ul>
-          <h1>Interface ISupportedInstruments</h1>
+          <h1>Interface ICandlesResponse</h1>
         </div>
       </div>
     </header>
@@ -92,7 +92,7 @@
             <h3>Hierarchy</h3>
             <ul class="tsd-hierarchy">
               <li>
-                <span class="target">ISupportedInstruments</span>
+                <span class="target">ICandlesResponse</span>
               </li>
             </ul>
           </section>
@@ -104,17 +104,36 @@
                   <h3>Properties</h3>
                   <ul class="tsd-index-list">
                     <li class="tsd-kind-property tsd-parent-kind-interface">
-                      <a
-                        href="isupportedinstruments.html#pairs"
-                        class="tsd-kind-icon"
-                        >pairs</a
+                      <a href="icandlesresponse.html#data" class="tsd-kind-icon"
+                        >data</a
                       >
                     </li>
                     <li class="tsd-kind-property tsd-parent-kind-interface">
                       <a
-                        href="isupportedinstruments.html#servertime"
+                        href="icandlesresponse.html#enddatetime"
                         class="tsd-kind-icon"
-                        >server<wbr />Time</a
+                        >end<wbr />Date<wbr />Time</a
+                      >
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a
+                        href="icandlesresponse.html#instrument"
+                        class="tsd-kind-icon"
+                        >instrument</a
+                      >
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a
+                        href="icandlesresponse.html#startdatetime"
+                        class="tsd-kind-icon"
+                        >start<wbr />Date<wbr />Time</a
+                      >
+                    </li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface">
+                      <a
+                        href="icandlesresponse.html#success"
+                        class="tsd-kind-icon"
+                        >success</a
                       >
                     </li>
                   </ul>
@@ -127,27 +146,20 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="pairs" class="tsd-anchor"></a>
-              <h3>pairs</h3>
+              <a name="data" class="tsd-anchor"></a>
+              <h3>data</h3>
               <div class="tsd-signature tsd-kind-icon">
-                pairs<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">Record</span
-                ><span class="tsd-signature-symbol">&lt;</span
-                ><span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">, </span
-                ><a href="iinstrument.html" class="tsd-signature-type"
-                  >IInstrument</a
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol">&gt;</span>
+                data<span class="tsd-signature-symbol">:</span>
+                <a href="icandle.html" class="tsd-signature-type">ICandle</a
+                ><span class="tsd-signature-symbol">[]</span>
               </div>
               <aside class="tsd-sources">
                 <ul>
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L51"
-                      >src/public.ts:51</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L92"
+                      >src/public.ts:92</a
                     >
                   </li>
                 </ul>
@@ -156,19 +168,86 @@
             <section
               class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
             >
-              <a name="servertime" class="tsd-anchor"></a>
-              <h3>server<wbr />Time</h3>
+              <a name="enddatetime" class="tsd-anchor"></a>
+              <h3>end<wbr />Date<wbr />Time</h3>
               <div class="tsd-signature tsd-kind-icon">
-                server<wbr />Time<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">number</span>
+                end<wbr />Date<wbr />Time<span class="tsd-signature-symbol"
+                  >:</span
+                >
+                <span class="tsd-signature-type">string</span>
               </div>
               <aside class="tsd-sources">
                 <ul>
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L50"
-                      >src/public.ts:50</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L94"
+                      >src/public.ts:94</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="instrument" class="tsd-anchor"></a>
+              <h3>instrument</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                instrument<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">string</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L91"
+                      >src/public.ts:91</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="startdatetime" class="tsd-anchor"></a>
+              <h3>start<wbr />Date<wbr />Time</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                start<wbr />Date<wbr />Time<span class="tsd-signature-symbol"
+                  >:</span
+                >
+                <span class="tsd-signature-type">string</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L93"
+                      >src/public.ts:93</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            >
+              <a name="success" class="tsd-anchor"></a>
+              <h3>success</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                success<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">true</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L90"
+                      >src/public.ts:90</a
                     >
                   </li>
                 </ul>
@@ -207,11 +286,50 @@
                   >ICandles<wbr />Options</a
                 >
               </li>
-              <li class="tsd-kind-interface">
+            </ul>
+            <ul class="current">
+              <li class="current tsd-kind-interface">
                 <a href="icandlesresponse.html" class="tsd-kind-icon"
                   >ICandles<wbr />Response</a
                 >
+                <ul>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a href="icandlesresponse.html#data" class="tsd-kind-icon"
+                      >data</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a
+                      href="icandlesresponse.html#enddatetime"
+                      class="tsd-kind-icon"
+                      >end<wbr />Date<wbr />Time</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a
+                      href="icandlesresponse.html#instrument"
+                      class="tsd-kind-icon"
+                      >instrument</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a
+                      href="icandlesresponse.html#startdatetime"
+                      class="tsd-kind-icon"
+                      >start<wbr />Date<wbr />Time</a
+                    >
+                  </li>
+                  <li class="tsd-kind-property tsd-parent-kind-interface">
+                    <a
+                      href="icandlesresponse.html#success"
+                      class="tsd-kind-icon"
+                      >success</a
+                    >
+                  </li>
+                </ul>
               </li>
+            </ul>
+            <ul class="after-current">
               <li class="tsd-kind-interface">
                 <a href="iinstrument.html" class="tsd-kind-icon">IInstrument</a>
               </li>
@@ -235,31 +353,11 @@
                   >ISupported<wbr />Assets</a
                 >
               </li>
-            </ul>
-            <ul class="current">
-              <li class="current tsd-kind-interface">
+              <li class="tsd-kind-interface">
                 <a href="isupportedinstruments.html" class="tsd-kind-icon"
                   >ISupported<wbr />Instruments</a
                 >
-                <ul>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a
-                      href="isupportedinstruments.html#pairs"
-                      class="tsd-kind-icon"
-                      >pairs</a
-                    >
-                  </li>
-                  <li class="tsd-kind-property tsd-parent-kind-interface">
-                    <a
-                      href="isupportedinstruments.html#servertime"
-                      class="tsd-kind-icon"
-                      >server<wbr />Time</a
-                    >
-                  </li>
-                </ul>
               </li>
-            </ul>
-            <ul class="after-current">
               <li class="tsd-kind-type-alias">
                 <a href="../globals.html#icandlesize" class="tsd-kind-icon"
                   >ICandle<wbr />Size</a

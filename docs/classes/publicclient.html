@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>PublicClient | b2trader - v1.3.0</title>
-    <meta name="description" content="Documentation for b2trader - v1.3.0" />
+    <title>PublicClient | b2trader - v1.4.0</title>
+    <meta name="description" content="Documentation for b2trader - v1.4.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
@@ -31,7 +31,7 @@
                 <li class="state loading">Preparing search index...</li>
                 <li class="state failure">The search index is not available</li>
               </ul>
-              <a href="../index.html" class="title">b2trader - v1.3.0</a>
+              <a href="../index.html" class="title">b2trader - v1.4.0</a>
             </div>
             <div class="table-cell" id="tsd-widgets">
               <div id="tsd-filter">
@@ -139,6 +139,13 @@
                     </li>
                     <li class="tsd-kind-method tsd-parent-kind-class">
                       <a
+                        href="publicclient.html#getcandles"
+                        class="tsd-kind-icon"
+                        >get<wbr />Candles</a
+                      >
+                    </li>
+                    <li class="tsd-kind-method tsd-parent-kind-class">
+                      <a
                         href="publicclient.html#getinstruments"
                         class="tsd-kind-icon"
                         >get<wbr />Instruments</a
@@ -146,9 +153,25 @@
                     </li>
                     <li class="tsd-kind-method tsd-parent-kind-class">
                       <a
+                        href="publicclient.html#getlistofinstruments"
+                        class="tsd-kind-icon"
+                        >get<wbr />List<wbr />OfInstruments</a
+                      >
+                    </li>
+                    <li class="tsd-kind-method tsd-parent-kind-class">
+                      <a
                         href="publicclient.html#getorderbooksnapshot"
                         class="tsd-kind-icon"
                         >get<wbr />Order<wbr />Book<wbr />Snapshot</a
+                      >
+                    </li>
+                    <li
+                      class="tsd-kind-method tsd-parent-kind-class tsd-is-private"
+                    >
+                      <a
+                        href="publicclient.html#resolveurl"
+                        class="tsd-kind-icon"
+                        >resolveURL</a
                       >
                     </li>
                     <li
@@ -206,8 +229,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L56"
-                          >src/public.ts:56</a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L98"
+                          >src/public.ts:98</a
                         >
                       </li>
                     </ul>
@@ -265,8 +288,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L56"
-                      >src/public.ts:56</a
+                      href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L98"
+                      >src/public.ts:98</a
                     >
                   </li>
                 </ul>
@@ -282,10 +305,12 @@
               <h3>fetch</h3>
               <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
                 <li class="tsd-signature tsd-kind-icon">
-                  fetch<span class="tsd-signature-symbol">(</span>path<span
+                  fetch<span class="tsd-signature-symbol">(</span>url<span
                     class="tsd-signature-symbol"
                     >: </span
-                  ><span class="tsd-signature-type">string</span>,
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol"> | </span
+                  ><span class="tsd-signature-type">URL</span>,
                   __namedParameters<span class="tsd-signature-symbol">?: </span
                   ><span class="tsd-signature-symbol">{ </span>headers<span
                     class="tsd-signature-symbol"
@@ -337,8 +362,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L97"
-                          >src/public.ts:97</a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L166"
+                          >src/public.ts:166</a
                         >
                       </li>
                     </ul>
@@ -352,7 +377,9 @@
                   <ul class="tsd-parameters">
                     <li>
                       <h5>
-                        path: <span class="tsd-signature-type">string</span>
+                        url: <span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><span class="tsd-signature-type">URL</span>
                       </h5>
                     </li>
                     <li>
@@ -474,8 +501,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L77"
-                          >src/public.ts:77</a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L120"
+                          >src/public.ts:120</a
                         >
                       </li>
                     </ul>
@@ -492,6 +519,96 @@
                       href="../interfaces/isupportedassets.html"
                       class="tsd-signature-type"
                       >ISupportedAssets</a
+                    ><span class="tsd-signature-symbol">&gt;</span>
+                  </h4>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"
+            >
+              <a name="getcandles" class="tsd-anchor"></a>
+              <h3>get<wbr />Candles</h3>
+              <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+                <li class="tsd-signature tsd-kind-icon">
+                  get<wbr />Candles<span class="tsd-signature-symbol">(</span
+                  >__namedParameters<span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-symbol">{ </span>instrument<span
+                    class="tsd-signature-symbol"
+                    >: </span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">; </span>qs<span
+                    class="tsd-signature-symbol"
+                    >: </span
+                  ><a href="" class="tsd-signature-type">qs</a
+                  ><span class="tsd-signature-symbol"> }</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><a
+                    href="../interfaces/icandlesresponse.html"
+                    class="tsd-signature-type"
+                    >ICandlesResponse</a
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L152"
+                          >src/public.ts:152</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>Get historic rates</p>
+                    </div>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>
+                        __namedParameters:
+                        <span class="tsd-signature-symbol">{ </span
+                        >instrument<span class="tsd-signature-symbol">: </span
+                        ><span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">; </span>qs<span
+                          class="tsd-signature-symbol"
+                          >: </span
+                        ><a href="" class="tsd-signature-type">qs</a
+                        ><span class="tsd-signature-symbol"> }</span>
+                      </h5>
+                      <ul class="tsd-parameters">
+                        <li class="tsd-parameter">
+                          <h5>
+                            instrument<span class="tsd-signature-symbol"
+                              >: </span
+                            ><span class="tsd-signature-type">string</span>
+                          </h5>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            qs<span class="tsd-signature-symbol">: </span
+                            ><a href="" class="tsd-signature-type">qs</a>
+                          </h5>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">
+                    Returns <span class="tsd-signature-type">Promise</span
+                    ><span class="tsd-signature-symbol">&lt;</span
+                    ><a
+                      href="../interfaces/icandlesresponse.html"
+                      class="tsd-signature-type"
+                      >ICandlesResponse</a
                     ><span class="tsd-signature-symbol">&gt;</span>
                   </h4>
                 </li>
@@ -524,8 +641,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L68"
-                          >src/public.ts:68</a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L110"
+                          >src/public.ts:110</a
                         >
                       </li>
                     </ul>
@@ -542,6 +659,53 @@
                       href="../interfaces/isupportedinstruments.html"
                       class="tsd-signature-type"
                       >ISupportedInstruments</a
+                    ><span class="tsd-signature-symbol">&gt;</span>
+                  </h4>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"
+            >
+              <a name="getlistofinstruments" class="tsd-anchor"></a>
+              <h3>get<wbr />List<wbr />OfInstruments</h3>
+              <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+                <li class="tsd-signature tsd-kind-icon">
+                  get<wbr />List<wbr />OfInstruments<span
+                    class="tsd-signature-symbol"
+                    >(</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">[]</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L130"
+                          >src/public.ts:130</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>Get the list of all supported instruments</p>
+                    </div>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns <span class="tsd-signature-type">Promise</span
+                    ><span class="tsd-signature-symbol">&lt;</span
+                    ><span class="tsd-signature-type">string</span
+                    ><span class="tsd-signature-symbol">[]</span
                     ><span class="tsd-signature-symbol">&gt;</span>
                   </h4>
                 </li>
@@ -581,8 +745,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L86"
-                          >src/public.ts:86</a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L140"
+                          >src/public.ts:140</a
                         >
                       </li>
                     </ul>
@@ -626,6 +790,53 @@
               </ul>
             </section>
             <section
+              class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private"
+            >
+              <a name="resolveurl" class="tsd-anchor"></a>
+              <h3>
+                <span class="tsd-flag ts-flagPrivate">Private</span> resolveURL
+              </h3>
+              <ul
+                class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private"
+              >
+                <li class="tsd-signature tsd-kind-icon">
+                  resolveURL<span class="tsd-signature-symbol">(</span>path<span
+                    class="tsd-signature-symbol"
+                    >: </span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">URL</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L179"
+                          >src/public.ts:179</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>
+                        path: <span class="tsd-signature-type">string</span>
+                      </h5>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">
+                    Returns <span class="tsd-signature-type">URL</span>
+                  </h4>
+                </li>
+              </ul>
+            </section>
+            <section
               class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static"
             >
               <a name="fetch-1" class="tsd-anchor"></a>
@@ -658,8 +869,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L130"
-                          >src/public.ts:130</a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L203"
+                          >src/public.ts:203</a
                         >
                       </li>
                     </ul>
@@ -739,8 +950,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/b2broker/b2trader-node/blob/fef2be4/src/public.ts#L115"
-                          >src/public.ts:115</a
+                          href="https://github.com/b2broker/b2trader-node/blob/8d8c0f2/src/public.ts#L188"
+                          >src/public.ts:188</a
                         >
                       </li>
                     </ul>
@@ -825,6 +1036,11 @@
                     >
                   </li>
                   <li class="tsd-kind-method tsd-parent-kind-class">
+                    <a href="publicclient.html#getcandles" class="tsd-kind-icon"
+                      >get<wbr />Candles</a
+                    >
+                  </li>
+                  <li class="tsd-kind-method tsd-parent-kind-class">
                     <a
                       href="publicclient.html#getinstruments"
                       class="tsd-kind-icon"
@@ -833,9 +1049,23 @@
                   </li>
                   <li class="tsd-kind-method tsd-parent-kind-class">
                     <a
+                      href="publicclient.html#getlistofinstruments"
+                      class="tsd-kind-icon"
+                      >get<wbr />List<wbr />OfInstruments</a
+                    >
+                  </li>
+                  <li class="tsd-kind-method tsd-parent-kind-class">
+                    <a
                       href="publicclient.html#getorderbooksnapshot"
                       class="tsd-kind-icon"
                       >get<wbr />Order<wbr />Book<wbr />Snapshot</a
+                    >
+                  </li>
+                  <li
+                    class="tsd-kind-method tsd-parent-kind-class tsd-is-private"
+                  >
+                    <a href="publicclient.html#resolveurl" class="tsd-kind-icon"
+                      >resolveURL</a
                     >
                   </li>
                   <li
@@ -859,6 +1089,25 @@
               <li class="tsd-kind-interface">
                 <a href="../interfaces/iasset.html" class="tsd-kind-icon"
                   >IAsset</a
+                >
+              </li>
+              <li class="tsd-kind-interface">
+                <a href="../interfaces/icandle.html" class="tsd-kind-icon"
+                  >ICandle</a
+                >
+              </li>
+              <li class="tsd-kind-interface">
+                <a
+                  href="../interfaces/icandlesoptions.html"
+                  class="tsd-kind-icon"
+                  >ICandles<wbr />Options</a
+                >
+              </li>
+              <li class="tsd-kind-interface">
+                <a
+                  href="../interfaces/icandlesresponse.html"
+                  class="tsd-kind-icon"
+                  >ICandles<wbr />Response</a
                 >
               </li>
               <li class="tsd-kind-interface">
@@ -901,6 +1150,11 @@
                   >ISupported<wbr />Instruments</a
                 >
               </li>
+              <li class="tsd-kind-type-alias">
+                <a href="../globals.html#icandlesize" class="tsd-kind-icon"
+                  >ICandle<wbr />Size</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -922,6 +1176,14 @@
             </li>
           </ul>
           <ul class="tsd-legend">
+            <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private">
+              <span class="tsd-kind-icon">Private property</span>
+            </li>
+            <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private">
+              <span class="tsd-kind-icon">Private method</span>
+            </li>
+          </ul>
+          <ul class="tsd-legend">
             <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static">
               <span class="tsd-kind-icon">Static property</span>
             </li>
@@ -939,11 +1201,6 @@
               class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"
             >
               <span class="tsd-kind-icon">Inherited property</span>
-            </li>
-          </ul>
-          <ul class="tsd-legend">
-            <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private">
-              <span class="tsd-kind-icon">Private property</span>
             </li>
           </ul>
         </div>

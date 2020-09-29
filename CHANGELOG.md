@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.0](https://github.com/b2broker/b2trader-node/compare/v1.3.0...v1.4.0) (2020-09-29)
+
+### Features
+
+- add the `getCandles` method ([692581c](https://github.com/b2broker/b2trader-node/commit/692581c75391e0465bf0f465ce8f43ab778773e6))
+- add the `getListOfInstruments` method ([f76a799](https://github.com/b2broker/b2trader-node/commit/f76a7992a83569da3858f5cee0ddc56353049222))
+
+### Bug Fixes
+
+- update urls ([c3f6454](https://github.com/b2broker/b2trader-node/commit/c3f6454a53d8e249413d9f89841b1c9a206d604b))
+
+### Performance Improvements
+
+- allow to pass the URL class to the fetch method ([303ad15](https://github.com/b2broker/b2trader-node/commit/303ad15bb2ff1e7581c28f1e260638aaf69ac743))
+
 ## [1.3.0](https://github.com/b2broker/b2trader-node/compare/v1.2.0...v1.3.0) (2020-09-28)
 
 ### Features
