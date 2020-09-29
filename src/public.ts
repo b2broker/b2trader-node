@@ -84,6 +84,16 @@ export class PublicClient {
   }
 
   /**
+   * Get the list of all supported instruments
+   */
+  public async getListOfInstruments(): Promise<string[]> {
+    const path = "/marketdata/instruments/";
+    const url = this.resolveURL(path);
+    const instruments = (await this.fetch(url)) as string[];
+    return instruments;
+  }
+
+  /**
    * Get the order book snapshot
    */
   public async getOrderBookSnapshot({
