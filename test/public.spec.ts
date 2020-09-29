@@ -47,8 +47,8 @@ suite("PublicClient", () => {
     };
     nock(url).get(`/frontoffice/api/info/`).delay(1).reply(200, response);
 
-    const accounts = await client.getInstruments();
-    assert.deepStrictEqual(accounts, response);
+    const instruments = await client.getInstruments();
+    assert.deepStrictEqual(instruments, response);
   });
 
   test(".getAssets()", async () => {
@@ -77,8 +77,16 @@ suite("PublicClient", () => {
       .delay(1)
       .reply(200, response);
 
-    const accounts = await client.getAssets();
-    assert.deepStrictEqual(accounts, response);
+    const assets = await client.getAssets();
+    assert.deepStrictEqual(assets, response);
+  });
+
+  test(".getListOfInstruments()", async () => {
+    const response: string[] = ["eur_usdt"];
+    nock(url).get(`/marketdata/instruments/`).delay(1).reply(200, response);
+
+    const instruments = await client.getListOfInstruments();
+    assert.deepStrictEqual(instruments, response);
   });
 
   test(".getOrderBookSnapshot()", async () => {
