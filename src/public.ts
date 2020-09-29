@@ -10,6 +10,27 @@ export interface IOrderBookSnapshotOptions {
   instrument: string;
 }
 
+export type ICandleSize =
+  | "1m"
+  | "5m"
+  | "15m"
+  | "30m"
+  | "1h"
+  | "2h"
+  | "4h"
+  | "8h"
+  | "12h"
+  | "1d"
+  | "1w"
+  | "1M";
+
+export interface ICandlesOptions extends IOrderBookSnapshotOptions {
+  startDate: string;
+  endDate: string;
+  type?: ICandleSize;
+  count?: number;
+}
+
 export interface IInstrument {
   baseAsset: string;
   quoteAsset: string;
@@ -51,6 +72,26 @@ export interface IOrderBookSnapshot {
   askTotalAmount: number;
   bidTotalAmount: number;
   snapshot: true;
+}
+
+export interface ICandle {
+  instrument: string;
+  start: string;
+  end: string;
+  low: number;
+  high: number;
+  volume: number;
+  quoteVolume: number;
+  open: number;
+  close: number;
+}
+
+export interface ICandlesResponse {
+  success: true;
+  instrument: string;
+  data: ICandle[];
+  startDateTime: string;
+  endDateTime: string;
 }
 
 export class PublicClient {
@@ -103,6 +144,20 @@ export class PublicClient {
     const url = this.resolveURL(path);
     const snapshot = (await this.fetch(url)) as IOrderBookSnapshot;
     return snapshot;
+  }
+
+  /**
+   * Get historic rates
+   */
+  public async getCandles({
+    instrument,
+    ...qs
+  }: ICandlesOptions): Promise<ICandlesResponse> {
+    const path = `/marketdata/instruments/${instrument}/history/`;
+    const url = this.resolveURL(path);
+    PublicClient.setQuery(url, { ...qs });
+    const candles = (await this.fetch(url)) as ICandlesResponse;
+    return candles;
   }
 
   /**
