@@ -43,6 +43,23 @@ const instrument = "btc_usd";
 const snapshot = await client.getOrderBookSnapshot({ instrument });
 ```
 
+- `.getCandles()`
+
+```typescript
+const instrument = "btc_usd";
+const startDate = "2020-01-24T07:26:04";
+const endDate = "2020-09-29T07:26:04";
+const type = "1m";
+const count = 2;
+const candles = await client.getCandles({
+  instrument,
+  startDate,
+  endDate,
+  type,
+  count,
+});
+```
+
 ## Test
 
 ```bash
