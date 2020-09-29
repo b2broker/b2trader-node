@@ -104,18 +104,7 @@ suite("PublicClient", () => {
 
     nock(url, { reqheaders }).get("/").delay(1).reply(200, response);
 
-    const data = await client.fetch("/");
-
-    assert.deepStrictEqual(data, response);
-  });
-
-  test(".fetch() (pathname starts with no slash)", async () => {
-    const response = { ok: 1 };
-    const reqheaders = { "Content-Type": "application/json" };
-
-    nock(url, { reqheaders }).get("/").delay(1).reply(200, response);
-
-    const data = await client.fetch("");
+    const data = await client.fetch(url);
 
     assert.deepStrictEqual(data, response);
   });

@@ -67,7 +67,8 @@ export class PublicClient {
    */
   public async getInstruments(): Promise<ISupportedInstruments> {
     const path = "/frontoffice/api/info";
-    const instruments = (await this.fetch(path)) as ISupportedInstruments;
+    const url = this.resolveURL(path);
+    const instruments = (await this.fetch(url)) as ISupportedInstruments;
     return instruments;
   }
 
@@ -76,7 +77,8 @@ export class PublicClient {
    */
   public async getAssets(): Promise<ISupportedAssets> {
     const path = "/frontoffice/api/assets-info";
-    const assets = (await this.fetch(path)) as ISupportedAssets;
+    const url = this.resolveURL(path);
+    const assets = (await this.fetch(url)) as ISupportedAssets;
     return assets;
   }
 
@@ -87,7 +89,8 @@ export class PublicClient {
     instrument,
   }: IOrderBookSnapshotOptions): Promise<IOrderBookSnapshot> {
     const path = `/marketdata/instruments/${instrument}/depth`;
-    const snapshot = (await this.fetch(path)) as IOrderBookSnapshot;
+    const url = this.resolveURL(path);
+    const snapshot = (await this.fetch(url)) as IOrderBookSnapshot;
     return snapshot;
   }
 
@@ -95,18 +98,22 @@ export class PublicClient {
    * Make a request and parse the body as JSON
    */
   public async fetch(
-    path: string,
+    url: string | URL,
     { headers, ...options }: fetch.RequestInit = {}
   ): Promise<unknown> {
     const jsonHeaders = new fetch.Headers(headers);
     jsonHeaders.set("Content-Type", "application/json");
-    const url = new URL(this.url.toString());
-    url.pathname += path.startsWith("/") ? path.substring(1) : path;
     const response = await PublicClient.fetch(url, {
       headers: jsonHeaders,
       ...options,
     });
     return response;
+  }
+
+  private resolveURL(path: string): URL {
+    const url = new URL(this.url.toString());
+    url.pathname += path.startsWith("/") ? path.substring(1) : path;
+    return url;
   }
 
   /**
