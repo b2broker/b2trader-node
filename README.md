@@ -60,6 +60,12 @@ const candles = await client.getCandles({
 });
 ```
 
+- `.getTiers()`
+
+```typescript
+const tiers = await client.getTiers();
+```
+
 ## Test
 
 ```bash
