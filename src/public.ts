@@ -94,6 +94,24 @@ export interface ICandlesResponse {
   endDateTime: string;
 }
 
+export interface ITier {
+  description: string;
+  volume: number;
+  makerFee: number;
+  takerFee: number;
+}
+
+export interface IGroup {
+  description: string;
+  tiers: ITier[];
+  instruments: string[];
+}
+
+export interface ITiersInfo {
+  rootAsset: string;
+  groups: IGroup[];
+}
+
 export class PublicClient {
   public readonly url: URL;
 
@@ -158,6 +176,16 @@ export class PublicClient {
     PublicClient.setQuery(url, { ...qs });
     const candles = (await this.fetch(url)) as ICandlesResponse;
     return candles;
+  }
+
+  /**
+   * Get tiers
+   */
+  public async getTiers(): Promise<ITiersInfo> {
+    const path = "/frontoffice/api/tiers-info/";
+    const url = this.resolveURL(path);
+    const assets = (await this.fetch(url)) as ITiersInfo;
+    return assets;
   }
 
   /**
