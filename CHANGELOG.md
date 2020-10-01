@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0](https://github.com/b2broker/b2trader-node/compare/v1.4.0...v1.5.0) (2020-10-01)
+
+### Features
+
+- add the `getTiers` method ([e95f7cf](https://github.com/b2broker/b2trader-node/commit/e95f7cf93683011d94d782e8f709524d8d6b10d5))
+
 ## [1.4.0](https://github.com/b2broker/b2trader-node/compare/v1.3.0...v1.4.0) (2020-09-29)
 
 ### Features
