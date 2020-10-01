@@ -9,6 +9,7 @@ import {
   ISupportedAssets,
   IOrderBookSnapshot,
   ICandlesResponse,
+  ITiersInfo,
 } from "../";
 
 const url = "https://api.some-b2trader.exchange:9876/trading/1.1/";
@@ -160,6 +161,30 @@ suite("PublicClient", () => {
       count,
     });
     assert.deepStrictEqual(candles, response);
+  });
+
+  test(".getTiers()", async () => {
+    const response: ITiersInfo = {
+      rootAsset: "usd",
+      groups: [
+        {
+          description: "Crypto to Crypto",
+          tiers: [
+            {
+              description: "Level 0",
+              volume: 0,
+              makerFee: 0.0012,
+              takerFee: 0.0015,
+            },
+          ],
+          instruments: ["b2bx_usdt", "xrp_usdc"],
+        },
+      ],
+    };
+    nock(url).get(`/frontoffice/api/tiers-info/`).delay(1).reply(200, response);
+
+    const instruments = await client.getTiers();
+    assert.deepStrictEqual(instruments, response);
   });
 
   test(".fetch() (passes headers)", async () => {

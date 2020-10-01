@@ -184,8 +184,8 @@ export class PublicClient {
   public async getTiers(): Promise<ITiersInfo> {
     const path = "/frontoffice/api/tiers-info/";
     const url = this.resolveURL(path);
-    const assets = (await this.fetch(url)) as ITiersInfo;
-    return assets;
+    const tiers = (await this.fetch(url)) as ITiersInfo;
+    return tiers;
   }
 
   /**
