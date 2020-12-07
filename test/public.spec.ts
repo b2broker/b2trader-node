@@ -9,6 +9,7 @@ import {
   ISupportedAssets,
   IOrderBookSnapshot,
   ICandlesResponse,
+  IRootAsset,
   ITiersInfo,
 } from "../";
 
@@ -161,6 +162,14 @@ suite("PublicClient", () => {
       count,
     });
     assert.deepStrictEqual(candles, response);
+  });
+
+  test(".getTiers()", async () => {
+    const response: IRootAsset = { rootAsset: "usd" };
+    nock(url).get(`/marketdata/info/root-asset/`).delay(1).reply(200, response);
+
+    const tiers = await client.getRootAsset();
+    assert.deepStrictEqual(tiers, response);
   });
 
   test(".getTiers()", async () => {

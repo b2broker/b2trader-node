@@ -60,6 +60,12 @@ const candles = await client.getCandles({
 });
 ```
 
+- `.getRootAsset()`
+
+```typescript
+const asset = await client.getRootAsset();
+```
+
 - `.getTiers()`
 
 ```typescript

@@ -107,8 +107,11 @@ export interface IGroup {
   instruments: string[];
 }
 
-export interface ITiersInfo {
+export interface IRootAsset {
   rootAsset: string;
+}
+
+export interface ITiersInfo extends IRootAsset {
   groups: IGroup[];
 }
 
@@ -186,6 +189,16 @@ export class PublicClient {
     const url = this.resolveURL(path);
     const tiers = (await this.fetch(url)) as ITiersInfo;
     return tiers;
+  }
+
+  /**
+   * Get the root asset
+   */
+  public async getRootAsset(): Promise<IRootAsset> {
+    const path = "/marketdata/info/root-asset/";
+    const url = this.resolveURL(path);
+    const asset = (await this.fetch(url)) as IRootAsset;
+    return asset;
   }
 
   /**
