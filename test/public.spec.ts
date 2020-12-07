@@ -9,6 +9,7 @@ import {
   ISupportedAssets,
   IOrderBookSnapshot,
   ICandlesResponse,
+  IRootAsset,
   ITiersInfo,
 } from "../";
 
@@ -22,9 +23,9 @@ suite("PublicClient", () => {
   });
 
   test("constructor (adds the missing slash)", () => {
-    const url = "https://api.some-b2trader.exchange:9876/trading/1.1";
-    const client = new PublicClient({ url });
-    assert.deepStrictEqual(client.url, new URL(`${url}/`));
+    const otherUrl = "https://api.some-b2trader.exchange:9876/trading/1.1";
+    const otherClient = new PublicClient({ url: otherUrl });
+    assert.deepStrictEqual(otherClient.url, new URL(`${otherUrl}/`));
   });
 
   test(".getInstruments()", async () => {
@@ -164,6 +165,14 @@ suite("PublicClient", () => {
   });
 
   test(".getTiers()", async () => {
+    const response: IRootAsset = { rootAsset: "usd" };
+    nock(url).get(`/marketdata/info/root-asset/`).delay(1).reply(200, response);
+
+    const tiers = await client.getRootAsset();
+    assert.deepStrictEqual(tiers, response);
+  });
+
+  test(".getTiers()", async () => {
     const response: ITiersInfo = {
       rootAsset: "usd",
       groups: [
@@ -201,7 +210,8 @@ suite("PublicClient", () => {
   suite("Static methods", () => {
     test(".setQuery()", () => {
       const newUrl = new URL(url);
-      PublicClient.setQuery(newUrl, { a: undefined });
+      let a: undefined;
+      PublicClient.setQuery(newUrl, { a });
       assert.deepStrictEqual(newUrl.href, `${url}`);
       PublicClient.setQuery(newUrl, { a: 1 });
       assert.deepStrictEqual(newUrl.href, `${url}?a=1`);

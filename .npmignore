@@ -20,6 +20,9 @@ docs/
 # ESLint config - https://eslint.org/
 .eslintrc.json
 
+# ESLint ignore - https://eslint.org/docs/user-guide/configuring#eslintignore
+.eslintignore
+
 # husky config - https://github.com/typicode/husky
 .huskyrc.json
 

@@ -107,8 +107,11 @@ export interface IGroup {
   instruments: string[];
 }
 
-export interface ITiersInfo {
+export interface IRootAsset {
   rootAsset: string;
+}
+
+export interface ITiersInfo extends IRootAsset {
   groups: IGroup[];
 }
 
@@ -189,6 +192,16 @@ export class PublicClient {
   }
 
   /**
+   * Get the root asset
+   */
+  public async getRootAsset(): Promise<IRootAsset> {
+    const path = "/marketdata/info/root-asset/";
+    const url = this.resolveURL(path);
+    const asset = (await this.fetch(url)) as IRootAsset;
+    return asset;
+  }
+
+  /**
    * Make a request and parse the body as JSON
    */
   public async fetch(
@@ -219,7 +232,7 @@ export class PublicClient {
   ): void {
     for (const key in query) {
       const value = query[key];
-      if (value !== undefined) {
+      if (typeof value !== "undefined") {
         url.searchParams.set(key, value.toString());
       }
     }
@@ -241,7 +254,7 @@ export class PublicClient {
       const data = await response.json();
       return data;
     } catch (error) {
-      throw new FetchError(error.message, response);
+      throw new FetchError((error as Error).message, response);
     }
   }
 }
