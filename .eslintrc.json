@@ -1,41 +1,6 @@
 {
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  "overrides": [
-    {
-      "files": ["*.spec.js"],
-      "env": { "mocha": true }
-    },
-    {
-      "files": ["*.js"],
-      "rules": { "@typescript-eslint/no-var-requires": "off" }
-    },
-    {
-      "files": ["./docs/**/*.js"],
-      "rules": {
-        "@typescript-eslint/no-this-alias": "off",
-        "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-unused-vars": "off",
-        "no-constant-condition": "off",
-        "no-prototype-builtins": "off",
-        "no-useless-escape": "off",
-        "prefer-destructuring": "off",
-        "no-empty": "off",
-        "no-inner-declarations": "off",
-        "eqeqeq": "off",
-        "no-undef": "off",
-        "no-console": "off"
-      }
-    }
-  ],
-  "env": { "node": true, "es2020": true },
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "curly": "error",
-    "eqeqeq": "error",
-    "linebreak-style": "error",
-    "prefer-destructuring": "error",
-    "semi": "error",
-    "no-console": "error"
+  "extends": ["b2broker-ts"],
+  "parserOptions": {
+    "project": "tsconfig.json"
   }
 }
