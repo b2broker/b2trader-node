@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.6.0](https://github.com/b2broker/b2trader-node/compare/v1.5.0...v1.6.0) (2020-12-07)
+
+### Features
+
+- add the `getRootAsset` method ([73626fa](https://github.com/b2broker/b2trader-node/commit/73626fa5ad3e134aa1998745d81bccfcb7253555))
+
+### Reverts
+
+- remove node:15 from ci matrix ([ab9a535](https://github.com/b2broker/b2trader-node/commit/ab9a535a26660edf27f09a9ccf2c689221d0e452))
+
 ## [1.5.0](https://github.com/b2broker/b2trader-node/compare/v1.4.0...v1.5.0) (2020-10-01)
 
 ### Features

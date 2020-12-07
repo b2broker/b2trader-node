@@ -1,9 +1,7 @@
 !(function (e) {
   var t = {};
   function r(n) {
-    if (t[n]) {
-      return t[n].exports;
-    }
+    if (t[n]) return t[n].exports;
     var i = (t[n] = { i: n, l: !1, exports: {} });
     return e[n].call(i.exports, i, i.exports, r), (i.l = !0), i.exports;
   }
@@ -19,19 +17,15 @@
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (r.t = function (e, t) {
-      if ((1 & t && (e = r(e)), 8 & t)) {
-        return e;
-      }
-      if (4 & t && "object" == typeof e && e && e.__esModule) {
-        return e;
-      }
+      if ((1 & t && (e = r(e)), 8 & t)) return e;
+      if (4 & t && "object" == typeof e && e && e.__esModule) return e;
       var n = Object.create(null);
       if (
         (r.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: e }),
         2 & t && "string" != typeof e)
-      ) {
-        for (var i in e) {
+      )
+        for (var i in e)
           r.d(
             n,
             i,
@@ -39,8 +33,6 @@
               return e[t];
             }.bind(null, i)
           );
-        }
-      }
       return n;
     }),
     (r.n = function (e) {
@@ -116,9 +108,7 @@
           return null == e ? "" : e.toString();
         }),
         (C.utils.clone = function (e) {
-          if (null == e) {
-            return e;
-          }
+          if (null == e) return e;
           for (
             var t = Object.create(null), r = Object.keys(e), n = 0;
             n < r.length;
@@ -126,18 +116,16 @@
           ) {
             var i = r[n],
               s = e[i];
-            if (Array.isArray(s)) {
-              t[i] = s.slice();
-            } else {
+            if (Array.isArray(s)) t[i] = s.slice();
+            else {
               if (
                 "string" != typeof s &&
                 "number" != typeof s &&
                 "boolean" != typeof s
-              ) {
+              )
                 throw new TypeError(
                   "clone is not deep and does not support nested objects"
                 );
-              }
               t[i] = s;
             }
           }
@@ -149,9 +137,7 @@
         (C.FieldRef.joiner = "/"),
         (C.FieldRef.fromString = function (e) {
           var t = e.indexOf(C.FieldRef.joiner);
-          if (-1 === t) {
-            throw "malformed field ref string";
-          }
+          if (-1 === t) throw "malformed field ref string";
           var r = e.slice(0, t),
             n = e.slice(t + 1);
           return new C.FieldRef(n, r, e);
@@ -170,12 +156,8 @@
          */ (C.Set = function (e) {
           if (((this.elements = Object.create(null)), e)) {
             this.length = e.length;
-            for (var t = 0; t < this.length; t++) {
-              this.elements[e[t]] = !0;
-            }
-          } else {
-            this.length = 0;
-          }
+            for (var t = 0; t < this.length; t++) this.elements[e[t]] = !0;
+          } else this.length = 0;
         }),
         (C.Set.complete = {
           intersect: function (e) {
@@ -207,12 +189,8 @@
             r,
             n,
             i = [];
-          if (e === C.Set.complete) {
-            return this;
-          }
-          if (e === C.Set.empty) {
-            return e;
-          }
+          if (e === C.Set.complete) return this;
+          if (e === C.Set.empty) return e;
           this.length < e.length
             ? ((t = this), (r = e))
             : ((t = e), (r = this)),
@@ -234,9 +212,7 @@
         }),
         (C.idf = function (e, t) {
           var r = 0;
-          for (var n in e) {
-            "_index" != n && (r += Object.keys(e[n]).length);
-          }
+          for (var n in e) "_index" != n && (r += Object.keys(e[n]).length);
           var i = (t - r + 0.5) / (r + 0.5);
           return Math.log(1 + Math.abs(i));
         }),
@@ -263,17 +239,14 @@
          * lunr.tokenizer
          * Copyright (C) 2020 Oliver Nightingale
          */ (C.tokenizer = function (e, t) {
-          if (null == e || null == e) {
-            return [];
-          }
-          if (Array.isArray(e)) {
+          if (null == e || null == e) return [];
+          if (Array.isArray(e))
             return e.map(function (e) {
               return new C.Token(
                 C.utils.asString(e).toLowerCase(),
                 C.utils.clone(t)
               );
             });
-          }
           for (
             var r = e.toString().toLowerCase(),
               n = r.length,
@@ -322,9 +295,8 @@
           return (
             e.forEach(function (e) {
               var r = C.Pipeline.registeredFunctions[e];
-              if (!r) {
+              if (!r)
                 throw new Error("Cannot load unregistered function: " + e);
-              }
               t.add(r);
             }),
             t
@@ -339,17 +311,13 @@
         (C.Pipeline.prototype.after = function (e, t) {
           C.Pipeline.warnIfFunctionNotRegistered(t);
           var r = this._stack.indexOf(e);
-          if (-1 == r) {
-            throw new Error("Cannot find existingFn");
-          }
+          if (-1 == r) throw new Error("Cannot find existingFn");
           (r += 1), this._stack.splice(r, 0, t);
         }),
         (C.Pipeline.prototype.before = function (e, t) {
           C.Pipeline.warnIfFunctionNotRegistered(t);
           var r = this._stack.indexOf(e);
-          if (-1 == r) {
-            throw new Error("Cannot find existingFn");
-          }
+          if (-1 == r) throw new Error("Cannot find existingFn");
           this._stack.splice(r, 0, t);
         }),
         (C.Pipeline.prototype.remove = function (e) {
@@ -360,15 +328,10 @@
           for (var t = this._stack.length, r = 0; r < t; r++) {
             for (var n = this._stack[r], i = [], s = 0; s < e.length; s++) {
               var o = n(e[s], s, e);
-              if (null != o && "" !== o) {
-                if (Array.isArray(o)) {
-                  for (var a = 0; a < o.length; a++) {
-                    i.push(o[a]);
-                  }
-                } else {
-                  i.push(o);
-                }
-              }
+              if (null != o && "" !== o)
+                if (Array.isArray(o))
+                  for (var a = 0; a < o.length; a++) i.push(o[a]);
+                else i.push(o);
             }
             e = i;
           }
@@ -395,9 +358,7 @@
           (this._magnitude = 0), (this.elements = e || []);
         }),
         (C.Vector.prototype.positionForIndex = function (e) {
-          if (0 == this.elements.length) {
-            return 0;
-          }
+          if (0 == this.elements.length) return 0;
           for (
             var t = 0,
               r = this.elements.length / 2,
@@ -406,11 +367,10 @@
               s = this.elements[2 * i];
             n > 1 && (s < e && (t = i), s > e && (r = i), s != e);
 
-          ) {
+          )
             (n = r - t),
               (i = t + Math.floor(n / 2)),
               (s = this.elements[2 * i]);
-          }
           return s == e || s > e ? 2 * i : s < e ? 2 * (i + 1) : void 0;
         }),
         (C.Vector.prototype.insert = function (e, t) {
@@ -426,9 +386,7 @@
             : this.elements.splice(n, 0, e, t);
         }),
         (C.Vector.prototype.magnitude = function () {
-          if (this._magnitude) {
-            return this._magnitude;
-          }
+          if (this._magnitude) return this._magnitude;
           for (var e = 0, t = this.elements.length, r = 1; r < t; r += 2) {
             var n = this.elements[r];
             e += n * n;
@@ -448,13 +406,12 @@
               l = 0;
             u < i && l < s;
 
-          ) {
+          )
             (o = r[u]) < (a = n[l])
               ? (u += 2)
               : o > a
               ? (l += 2)
               : o == a && ((t += r[u + 1] * n[l + 1]), (u += 2), (l += 2));
-          }
           return t;
         }),
         (C.Vector.prototype.similarity = function (e) {
@@ -465,9 +422,8 @@
             var e = new Array(this.elements.length / 2), t = 1, r = 0;
             t < this.elements.length;
             t += 2, r++
-          ) {
+          )
             e[r] = this.elements[t];
-          }
           return e;
         }),
         (C.Vector.prototype.toJSON = function () {
@@ -540,9 +496,7 @@
           (T = new RegExp("^" + l + u + "[^aeiouwxy]$")),
           (_ = function (e) {
             var t, r, n, i, s, u, l;
-            if (e.length < 3) {
-              return e;
-            }
+            if (e.length < 3) return e;
             if (
               ("y" == (n = e.substr(0, 1)) &&
                 (e = n.toUpperCase() + e.substr(1)),
@@ -555,7 +509,7 @@
             ) {
               var _ = i.exec(e);
               (i = c).test(_[1]) && ((i = g), (e = e.replace(i, "")));
-            } else {
+            } else
               s.test(e) &&
                 ((t = (_ = s.exec(e))[1]),
                 (s = f).test(t) &&
@@ -566,7 +520,6 @@
                     : u.test(e)
                     ? ((i = g), (e = e.replace(i, "")))
                     : l.test(e) && (e += "e")));
-            }
             return (
               (i = E).test(e) && (e = (t = (_ = i.exec(e))[1]) + "i"),
               (i = b).test(e) &&
@@ -605,9 +558,7 @@
             return (e[t] = t), e;
           }, {});
           return function (e) {
-            if (e && t[e.toString()] !== e.toString()) {
-              return e;
-            }
+            if (e && t[e.toString()] !== e.toString()) return e;
           };
         }),
         (C.stopWordFilter = C.generateStopWordFilter([
@@ -756,9 +707,8 @@
             var t = new C.TokenSet.Builder(), r = 0, n = e.length;
             r < n;
             r++
-          ) {
+          )
             t.insert(e[r]);
-          }
           return t.finish(), t.root;
         }),
         (C.TokenSet.fromClause = function (e) {
@@ -788,9 +738,8 @@
                 });
             }
             if (0 != i.editsRemaining) {
-              if ("*" in i.node.edges) {
-                var a = i.node.edges["*"];
-              } else {
+              if ("*" in i.node.edges) var a = i.node.edges["*"];
+              else {
                 a = new C.TokenSet();
                 i.node.edges["*"] = a;
               }
@@ -810,9 +759,8 @@
                 1 == i.str.length && (i.node.final = !0),
                 i.str.length >= 1)
               ) {
-                if ("*" in i.node.edges) {
-                  var u = i.node.edges["*"];
-                } else {
+                if ("*" in i.node.edges) var u = i.node.edges["*"];
+                else {
                   u = new C.TokenSet();
                   i.node.edges["*"] = u;
                 }
@@ -849,9 +797,8 @@
           ) {
             var s = e[n],
               o = n == i - 1;
-            if ("*" == s) {
-              (t.edges[s] = t), (t.final = o);
-            } else {
+            if ("*" == s) (t.edges[s] = t), (t.final = o);
+            else {
               var a = new C.TokenSet();
               (a.final = o), (t.edges[s] = a), (t = a);
             }
@@ -872,9 +819,7 @@
           return e;
         }),
         (C.TokenSet.prototype.toString = function () {
-          if (this._str) {
-            return this._str;
-          }
+          if (this._str) return this._str;
           for (
             var e = this.final ? "1" : "0",
               t = Object.keys(this.edges).sort(),
@@ -905,7 +850,7 @@
                 u = 0;
               u < s;
               u++
-            ) {
+            )
               for (var l = i[u], c = 0; c < a; c++) {
                 var h = o[c];
                 if (h == l || "*" == l) {
@@ -920,7 +865,6 @@
                     n.push({ qNode: f, output: y, node: d });
                 }
               }
-            }
           }
           return t;
         }),
@@ -933,18 +877,16 @@
         (C.TokenSet.Builder.prototype.insert = function (e) {
           var t,
             r = 0;
-          if (e < this.previousWord) {
+          if (e < this.previousWord)
             throw new Error("Out of order word insertion");
-          }
           for (
             var n = 0;
             n < e.length &&
             n < this.previousWord.length &&
             e[n] == this.previousWord[n];
             n++
-          ) {
+          )
             r++;
-          }
           this.minimize(r),
             (t =
               0 == this.uncheckedNodes.length
@@ -998,9 +940,8 @@
               a = 0;
             a < this.fields.length;
             a++
-          ) {
+          )
             n[this.fields[a]] = new C.Vector();
-          }
           e.call(t, t);
           for (a = 0; a < t.clauses.length; a++) {
             var u = t.clauses[a],
@@ -1052,18 +993,16 @@
                       }
                       i[E] = !0;
                     }
-                  } else {
+                  } else
                     void 0 === o[R] && (o[R] = C.Set.empty),
                       (o[R] = o[R].union(b));
-                  }
                 }
               }
             }
-            if (u.presence === C.Query.presence.REQUIRED) {
+            if (u.presence === C.Query.presence.REQUIRED)
               for (y = 0; y < u.fields.length; y++) {
                 s[(R = u.fields[y])] = s[R].intersect(c);
               }
-            }
           }
           var T = C.Set.complete,
             _ = C.Set.empty;
@@ -1089,9 +1028,9 @@
               var A,
                 z = this.fieldVectors[N],
                 q = n[N.fieldName].similarity(z);
-              if (void 0 !== (A = F[D])) {
+              if (void 0 !== (A = F[D]))
                 (A.score += q), A.matchData.combine(r[N]);
-              } else {
+              else {
                 var V = { ref: D, score: q, matchData: r[N] };
                 (F[D] = V), j.push(V);
               }
@@ -1178,11 +1117,10 @@
           this._ref = e;
         }),
         (C.Builder.prototype.field = function (e, t) {
-          if (/\//.test(e)) {
+          if (/\//.test(e))
             throw new RangeError(
               "Field '" + e + "' contains illegal character '/'"
             );
-          }
           this._fields[e] = t || {};
         }),
         (C.Builder.prototype.b = function (e) {
@@ -1215,9 +1153,8 @@
               ) {
                 var p = Object.create(null);
                 (p._index = this.termIndex), (this.termIndex += 1);
-                for (var y = 0; y < n.length; y++) {
+                for (var y = 0; y < n.length; y++)
                   p[n[y]] = Object.create(null);
-                }
                 this.invertedIndex[f] = p;
               }
               null == this.invertedIndex[f][s][r] &&
@@ -1364,22 +1301,19 @@
           }
         }),
         (C.MatchData.prototype.add = function (e, t, r) {
-          if (!(e in this.metadata)) {
+          if (!(e in this.metadata))
             return (
               (this.metadata[e] = Object.create(null)),
               void (this.metadata[e][t] = r)
             );
-          }
-          if (t in this.metadata[e]) {
+          if (t in this.metadata[e])
             for (var n = Object.keys(r), i = 0; i < n.length; i++) {
               var s = n[i];
               s in this.metadata[e][t]
                 ? (this.metadata[e][t][s] = this.metadata[e][t][s].concat(r[s]))
                 : (this.metadata[e][t][s] = r[s]);
             }
-          } else {
-            this.metadata[e][t] = r;
-          }
+          else this.metadata[e][t] = r;
         }),
         (C.Query = function (e) {
           (this.clauses = []), (this.allFields = e);
@@ -1407,22 +1341,19 @@
           );
         }),
         (C.Query.prototype.isNegated = function () {
-          for (var e = 0; e < this.clauses.length; e++) {
-            if (this.clauses[e].presence != C.Query.presence.PROHIBITED) {
+          for (var e = 0; e < this.clauses.length; e++)
+            if (this.clauses[e].presence != C.Query.presence.PROHIBITED)
               return !1;
-            }
-          }
           return !0;
         }),
         (C.Query.prototype.term = function (e, t) {
-          if (Array.isArray(e)) {
+          if (Array.isArray(e))
             return (
               e.forEach(function (e) {
                 this.term(e, C.utils.clone(t));
               }, this),
               this
             );
-          }
           var r = t || {};
           return (r.term = e.toString()), this.clause(r), this;
         }),
@@ -1442,20 +1373,17 @@
             (this.escapeCharPositions = []);
         }),
         (C.QueryLexer.prototype.run = function () {
-          for (var e = C.QueryLexer.lexText; e; ) {
-            e = e(this);
-          }
+          for (var e = C.QueryLexer.lexText; e; ) e = e(this);
         }),
         (C.QueryLexer.prototype.sliceString = function () {
           for (
             var e = [], t = this.start, r = this.pos, n = 0;
             n < this.escapeCharPositions.length;
             n++
-          ) {
+          )
             (r = this.escapeCharPositions[n]),
               e.push(this.str.slice(t, r)),
               (t = r + 1);
-          }
           return (
             e.push(this.str.slice(t, this.pos)),
             (this.escapeCharPositions.length = 0),
@@ -1475,9 +1403,7 @@
           this.escapeCharPositions.push(this.pos - 1), (this.pos += 1);
         }),
         (C.QueryLexer.prototype.next = function () {
-          if (this.pos >= this.length) {
-            return C.QueryLexer.EOS;
-          }
+          if (this.pos >= this.length) return C.QueryLexer.EOS;
           var e = this.str.charAt(this.pos);
           return (this.pos += 1), e;
         }),
@@ -1519,9 +1445,8 @@
             (e.width() > 1 && (e.backup(), e.emit(C.QueryLexer.TERM)),
             e.ignore(),
             e.more())
-          ) {
+          )
             return C.QueryLexer.lexText;
-          }
         }),
         (C.QueryLexer.lexEditDistance = function (e) {
           return (
@@ -1546,39 +1471,28 @@
         (C.QueryLexer.lexText = function (e) {
           for (;;) {
             var t = e.next();
-            if (t == C.QueryLexer.EOS) {
-              return C.QueryLexer.lexEOS;
-            }
+            if (t == C.QueryLexer.EOS) return C.QueryLexer.lexEOS;
             if (92 != t.charCodeAt(0)) {
-              if (":" == t) {
-                return C.QueryLexer.lexField;
-              }
-              if ("~" == t) {
+              if (":" == t) return C.QueryLexer.lexField;
+              if ("~" == t)
                 return (
                   e.backup(),
                   e.width() > 0 && e.emit(C.QueryLexer.TERM),
                   C.QueryLexer.lexEditDistance
                 );
-              }
-              if ("^" == t) {
+              if ("^" == t)
                 return (
                   e.backup(),
                   e.width() > 0 && e.emit(C.QueryLexer.TERM),
                   C.QueryLexer.lexBoost
                 );
-              }
-              if ("+" == t && 1 === e.width()) {
+              if ("+" == t && 1 === e.width())
                 return e.emit(C.QueryLexer.PRESENCE), C.QueryLexer.lexText;
-              }
-              if ("-" == t && 1 === e.width()) {
+              if ("-" == t && 1 === e.width())
                 return e.emit(C.QueryLexer.PRESENCE), C.QueryLexer.lexText;
-              }
-              if (t.match(C.QueryLexer.termSeparator)) {
+              if (t.match(C.QueryLexer.termSeparator))
                 return C.QueryLexer.lexTerm;
-              }
-            } else {
-              e.escapeCharacter();
-            }
+            } else e.escapeCharacter();
           }
         }),
         (C.QueryParser = function (e, t) {
@@ -1589,9 +1503,7 @@
         }),
         (C.QueryParser.prototype.parse = function () {
           this.lexer.run(), (this.lexemes = this.lexer.lexemes);
-          for (var e = C.QueryParser.parseClause; e; ) {
-            e = e(this);
-          }
+          for (var e = C.QueryParser.parseClause; e; ) e = e(this);
           return this.query;
         }),
         (C.QueryParser.prototype.peekLexeme = function () {
@@ -1607,7 +1519,7 @@
         }),
         (C.QueryParser.parseClause = function (e) {
           var t = e.peekLexeme();
-          if (null != t) {
+          if (null != t)
             switch (t.type) {
               case C.QueryLexer.PRESENCE:
                 return C.QueryParser.parsePresence;
@@ -1622,7 +1534,6 @@
                   new C.QueryParseError(r, t.start, t.end))
                 );
             }
-          }
         }),
         (C.QueryParser.parsePresence = function (e) {
           var t = e.consumeLexeme();
@@ -1687,7 +1598,7 @@
             (e.currentClause.term = t.str.toLowerCase()),
               -1 != t.str.indexOf("*") && (e.currentClause.usePipeline = !1);
             var r = e.peekLexeme();
-            if (null != r) {
+            if (null != r)
               switch (r.type) {
                 case C.QueryLexer.TERM:
                   return e.nextClause(), C.QueryParser.parseTerm;
@@ -1703,9 +1614,7 @@
                   var n = "Unexpected lexeme type '" + r.type + "'";
                   throw new C.QueryParseError(n, r.start, r.end);
               }
-            } else {
-              e.nextClause();
-            }
+            else e.nextClause();
           }
         }),
         (C.QueryParser.parseEditDistance = function (e) {
@@ -1718,7 +1627,7 @@
             }
             e.currentClause.editDistance = r;
             var i = e.peekLexeme();
-            if (null != i) {
+            if (null != i)
               switch (i.type) {
                 case C.QueryLexer.TERM:
                   return e.nextClause(), C.QueryParser.parseTerm;
@@ -1734,9 +1643,7 @@
                   n = "Unexpected lexeme type '" + i.type + "'";
                   throw new C.QueryParseError(n, i.start, i.end);
               }
-            } else {
-              e.nextClause();
-            }
+            else e.nextClause();
           }
         }),
         (C.QueryParser.parseBoost = function (e) {
@@ -1749,7 +1656,7 @@
             }
             e.currentClause.boost = r;
             var i = e.peekLexeme();
-            if (null != i) {
+            if (null != i)
               switch (i.type) {
                 case C.QueryLexer.TERM:
                   return e.nextClause(), C.QueryParser.parseTerm;
@@ -1765,9 +1672,7 @@
                   n = "Unexpected lexeme type '" + i.type + "'";
                   throw new C.QueryParseError(n, i.start, i.end);
               }
-            } else {
-              e.nextClause();
-            }
+            else e.nextClause();
           }
         }),
         void 0 ===
@@ -1820,9 +1725,8 @@
                 e.__proto__ = t;
               }) ||
             function (e, t) {
-              for (var r in t) {
+              for (var r in t)
                 Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
-              }
             })(e, t);
         }),
         function (e, t) {
@@ -1853,11 +1757,10 @@
             (r.resultClicked = !1);
           var n = document.querySelector("#tsd-search-field"),
             i = document.querySelector(".results");
-          if (!n || !i) {
+          if (!n || !i)
             throw new Error(
               "The input field or the result list wrapper are not found"
             );
-          }
           return (
             (r.field = n),
             (r.results = i),
@@ -1878,9 +1781,7 @@
               t
                 ? fetch(t)
                     .then(function (e) {
-                      if (!e.ok) {
-                        throw new Error("The search index is missing");
-                      }
+                      if (!e.ok) throw new Error("The search index is missing");
                       return e.json();
                     })
                     .then(function (t) {
@@ -1947,11 +1848,10 @@
             if (t) {
               var r = 1 == e ? t.nextElementSibling : t.previousElementSibling;
               r && (t.classList.remove("current"), r.classList.add("current"));
-            } else {
+            } else
               (t = this.results.querySelector(
                 1 == e ? "li:first-child" : "li:last-child"
               )) && t.classList.add("current");
-            }
           }),
           (t.prototype.gotoCurrentResult = function () {
             var e = this.results.querySelector(".current");
@@ -2023,25 +1923,18 @@
               this.listeners[e].push(t);
           }),
           (e.prototype.removeEventListener = function (e, t) {
-            if (e in this.listeners) {
-              for (var r = this.listeners[e], n = 0, i = r.length; n < i; n++) {
-                if (r[n] === t) {
-                  return void r.splice(n, 1);
-                }
-              }
-            }
+            if (e in this.listeners)
+              for (var r = this.listeners[e], n = 0, i = r.length; n < i; n++)
+                if (r[n] === t) return void r.splice(n, 1);
           }),
           (e.prototype.dispatchEvent = function (e) {
-            if (!(e.type in this.listeners)) {
-              return !0;
-            }
+            if (!(e.type in this.listeners)) return !0;
             for (
               var t = this.listeners[e.type].slice(), r = 0, n = t.length;
               r < n;
               r++
-            ) {
+            )
               t[r].call(this, e);
-            }
             return !e.defaultPrevented;
           }),
           e
@@ -2051,9 +1944,8 @@
         void 0 === t && (t = 100);
         var r = Date.now();
         return function () {
-          for (var n = [], i = 0; i < arguments.length; i++) {
+          for (var n = [], i = 0; i < arguments.length; i++)
             n[i] = arguments[i];
-          }
           r + t - Date.now() < 0 && (e.apply(void 0, n), (r = Date.now()));
         };
       },
@@ -2066,9 +1958,8 @@
                 e.__proto__ = t;
               }) ||
             function (e, t) {
-              for (var r in t) {
+              for (var r in t)
                 Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
-              }
             })(t, r);
         };
         return function (t, r) {
@@ -2159,9 +2050,8 @@
                 e.__proto__ = t;
               }) ||
             function (e, t) {
-              for (var r in t) {
+              for (var r in t)
                 Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
-              }
             })(t, r);
         };
         return function (t, r) {
@@ -2229,12 +2119,9 @@
                 i = this.index;
               i > -1 && r[i].position > t;
 
-            ) {
+            )
               i -= 1;
-            }
-            for (; i < n && r[i + 1].position < t; ) {
-              i += 1;
-            }
+            for (; i < n && r[i + 1].position < t; ) i += 1;
             this.index != i &&
               (this.index > -1 &&
                 this.anchors[this.index].link.classList.remove("focus"),
@@ -2254,9 +2141,8 @@
                 e.__proto__ = t;
               }) ||
             function (e, t) {
-              for (var r in t) {
+              for (var r in t)
                 Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
-              }
             })(t, r);
         };
         return function (t, r) {
@@ -2332,9 +2218,7 @@
                   setTimeout(function () {
                     r.removeClass("fade-out"), t.removeClass("fade-in");
                   }, 300);
-              } else {
-                t.addClass("current"), y.instance.triggerResize();
-              }
+              } else t.addClass("current"), y.instance.triggerResize();
               this.index = e;
             }
           }),
@@ -2344,9 +2228,8 @@
               this.container = this.el.nextElementSibling;
               var t = this.container.children;
               this.groups = [];
-              for (var r = 0; r < e.length; r++) {
+              for (var r = 0; r < e.length; r++)
                 this.groups.push(new x(e[r], t[r]));
-              }
             }
           }),
           (t.prototype.onClick = function (e) {
@@ -2400,9 +2283,8 @@
                 e.__proto__ = t;
               }) ||
             function (e, t) {
-              for (var r in t) {
+              for (var r in t)
                 Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
-              }
             })(t, r);
         };
         return function (t, r) {
@@ -2458,9 +2340,7 @@
           }),
           (t.prototype.onDocumentPointerDown = function (e) {
             if (this.active) {
-              if (e.target.closest(".col-menu, .tsd-filter-group")) {
-                return;
-              }
+              if (e.target.closest(".col-menu, .tsd-filter-group")) return;
               this.setActive(!1);
             }
           }),
@@ -2490,9 +2370,8 @@
                 e.__proto__ = t;
               }) ||
             function (e, t) {
-              for (var r in t) {
+              for (var r in t)
                 Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
-              }
             })(t, r);
         };
         return function (t, r) {
