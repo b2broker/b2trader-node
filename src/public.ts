@@ -219,7 +219,7 @@ export class PublicClient {
   ): void {
     for (const key in query) {
       const value = query[key];
-      if (value !== undefined) {
+      if (typeof value !== "undefined") {
         url.searchParams.set(key, value.toString());
       }
     }
@@ -241,7 +241,7 @@ export class PublicClient {
       const data = await response.json();
       return data;
     } catch (error) {
-      throw new FetchError(error.message, response);
+      throw new FetchError((error as Error).message, response);
     }
   }
 }
